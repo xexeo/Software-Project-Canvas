@@ -10,10 +10,12 @@ Maiores explicações podem ser obtidas no [relatório que o explica](softwarepr
 
 Os canvas original e duas variações possíveis, em formato A4, [podem ser encontrados aqui](dist/Software%20Project%20Canvas%20v1.0.pdf).
 
-Software Project Canvas © 2021 by Geraldo Xexéo está licensiado como CC BY-SA 4.0
 
 ![Software Project Canvas](imagens/alternativa1.png "Software Project Canvas")
 
-![image](https://user-images.githubusercontent.com/3393677/130265022-98d1bf6e-de03-40f7-9960-b3b3214ce2e8.png)
+
+
+O Software Project Canvas © 2021 by Geraldo Xexéo está licenciado como CC BY-SA 4.0
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional</a>.
 
 
