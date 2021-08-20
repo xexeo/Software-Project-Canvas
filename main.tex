@@ -1,9 +1,11 @@
-\documentclass{article}
+\documentclass[a4]{report}
+\renewcommand{\thesection}{\arabic{section}}
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
 \usepackage[natbib]{biblatex}
 \usepackage{booktabs}
+\usepackage{outlines}
 \usepackage{graphicx}
 \usepackage{datetime2}
 \addbibresource{bibs/bibliografia.bib}
@@ -13,6 +15,7 @@
 \usepackage{indentfirst}
 \usepackage{caption}
 \captionsetup{font={footnotesize,bf},justification=centering,margin=1cm}
+\usepackage{subcaption}
 \usepackage{hyperref}
 
 \title{Software Project Canvas v1.0}
@@ -29,6 +32,11 @@ Para a sua  criação foram observadas \ref{problems:total} dificuldades  ao ens
 
 As modificações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo, durante a reunião de concepção do projeto, com discussões semânticas sobre o significado das coisas que não adiantam a definição do projeto.
 \end{abstract}
+
+\tableofcontents
+\listoffigures
+
+\newpage
 
 \section{Introducão}
 
@@ -128,14 +136,11 @@ Como resultado, o processo é transformado de 12 para 9 passos, já que mesmo em
 
 \section{O \textit{Software Project Canvas}}
 
-Para desenvolver o \textit{Project Model Canvas}, é adotada  mesma metodologia de quatro passos proposta por \citet{finocchio:2013}. Nessa metodologia, a fase de concepção é alterada de forma a atender as características do \textit{Software Project Canvas}, tendo 9 passos, para preencher 10 quadros, que serão descritos a seguir.
+O Software Project Canvas utiliza 10 quadros, que serão descritos nesta seção. Para cada quadro foi buscado explicar o que ele trata, métodos que podem ser usados para auxiliar seu preenchimento e alguns exemplos. Os quadros se organizam em 6 grupos que respondem às perguntas 5W2H\citep{nakagawa:2012:5w2h}: \textit{Why, What, Who, When, How} e \textit{How Much}. Não é necessário, em geral, reponder a pergunta \textit{Where}.
 
-Para cada passo foi buscado explicar o que ele trata, métodos que podem ser usados para realizá-la e alguns exemplos.
-
-Os passos se organizam em 6 grupos:
 \begin{itemize}
     \item Por que: o que justifica o projeto, os Problemas e Oportunidades, e os Objetivos e Metas;
-    \item O que: o que é o projeto, indicado pelos requisitos e restrições;
+    \item O que: o que é o projeto, indicado pelos Requisitos Funcionais, Requisitos Não-Funcionais e Restrições;
     \item Quem: indicado pelas Partes Interessadas e a Equipe;
     \item Como: indicado pelos Subsídios e Premissas;
     \item Quando: indicado pelas Entregas, e
@@ -303,13 +308,156 @@ Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-
 
 Técnicas adequadas nesse ponto são variações do método de Delphi\citep{delphi:1966}, como o \textit{Planning Poker}\citep{mike:agile:estimating}, ou uso de heurísticas como buscar previsões pessimistas ($P$), médias ($M$) e otimistas ($O$) e calcular uma média ponderada ($M_p=\frac{P+4\times M+O}{6})$\citep{pmbok:6}.
 
-\section{A Metodologia}
+\section{A Metodologia do \textit{Software Project Canvas}}
+
+A metododologia utilizada do \textit{Software Project Canvas} possui 4 grandes passos, sendo inspirada na metodologia proposta pelo \textit{Project Model Canvas}. Ele está descrita em BPMN nas Figuras \ref{fig:bpmn1} e \ref{fig:bpmn2}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{imagens/Software Project Canvas - 4 pessos.adf.png}
+    \caption{Descrição do processo de criação do Software Project Canvas. Fonte: imagem do autor}
+    \label{fig:bpmn1}
+\end{figure}
+
+\subsection{Conceber Projeto}
+
+A principal atividade criativa da metodologia é Conceber o Projeto. Isso é feito em uma, ou mais, reuniões facilitadas, em que o Canvas é usado como foco de colaboração. Os passos dessa reunião são descritos na Figura \ref{fig:bpmn2}, porém esse segundo processo deve ser entendido de forma genérica, já que não há proibição de se voltar a um passo anterior para melhorar, apagar ou propor novos itens.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{imagens/Conceber Projeto do Software Project Canvas.png}
+    \caption{Descrição do sub-processo Conceber Projeto, do processo de criação do Software Project Canvas. Fonte: imagem do autor}
+    \label{fig:bpmn2}
+\end{figure}
+
+
+Essas reuniões devem contar com representantes da equipe e das partes interessadas, incluindo o patrocinador, clientes, e membros do escritório de projetos ou assemelhados, se essa função existir na organização. É essencial que existam pessoas com a compreensão da gestão de projetos de desenvolvimento software para liderar a reunião, explicar conceitos e trazer sua experiência nas propostas e estimativas.
+
+Durante a reunião, cada passo é focada em preencher um quadro, e para isso deve ser usada uma estratégia em diamante, onde em um primeiro momento deve ser usada uma prática de divergência, ou geração criativa de ideias, normalmente o \textit{brainstorming}\citep{tracy:2015} ou técnica derivada, ou assemelhada, e em um segundo momento uma técnica de convergência,  seja ela de a busca de consenso, priorização ou votação, como por exemplo MoSCoW\citep{dsdm:2nd} ou \textit{dot-voting}\citep{gray:2010}. 
+
+Os quadros devem ser inicialmente preenchidos sem limites, já que é necessário estimular a criatividade durante o momento de divergência. Já durante o momento onde se faz a convergência eles devem ser agrupados em ideias semelhantes e postos em ordem de prioridade, urgência ou importância. Além disso, é necessário garantir que todos os \textit{post-its} estejam em um mesmo nível de abstração, se necessário agrupando vários em um só, ou separando um em vários. 
+Em cada passo, então, são colocados, modificados e retirados \textit{post-its} no canvas, até que os participantes estejam satisfeitos.
+
+É importante notar que a metodologia faz, em um só passo, todo o levantamento de requisitos funcionais, não-funcionais, e restrições. Isso foi decidido pelo fato de, ao usar outras metodologias, ser comum que um item desses tópicos seja proposto enquanto outro tópico é feito. Unificando esse momento, não é necessário parar para discutir questões de ordem da reunião.
+
+É possível que durante um quadro, como por exemplo premissa, se descubra a necessidade de incluir um novo \textit{post-it} em um quadro anterior, por exemplo, uma nova parte interessada. Isso é totalmente permitido, não sendo necessário refazer todo o trabalho do quadro anterior, porém devemos verificar com atenção esse novo item no próximo passo.
+
+Ao longo da Concepção, é importante que os participantes da reunião estejam atentos às regras que serão usadas na verificação, principalmente no momento de convergência, para garantir desde início a qualidade do quadro.
+
+É possível também usar \textit{post-its} com cores e tamanhos diferentes para dar significados específicos. Por exemplo, podem ser usados \textit{post-its} vermelhos para chamar atenção de itens que foram colocados em um quadro após eles já terem sido resolvidos em uma primeira passagem.
+
+\subsection{Concepção Iterativa e Incremental}
+
+É possível realizar a concepção do processo de forma iterativa e incremental, mesmo que em apenas uma seção. Para isso, se inicia cada iteração com um problema ou oportunidade, normalmente o mais importante, e se passa por todos os quadros atendendo apenas aquele problema, e mais nenhum outro. Ao terminar a iteração, deve ser analisado se é razoável fazer outra iteração ou o projeto já está definido. 
+
+Durante cada iteração pode ser necessário adaptar o resultado das iterações anteriores para atender os requisitos da nova iteração. Por isso é importante manter alguma memória ao final de cada iteração, por exemplo fotografando o quadro, ou o reproduzindo rapidamente em uma ferramenta digital, como Miro ou mesmo o Power Point.
+
+Mesmo que a próxima iteração do projeto vá resolver apenas o primeiro problema, é interessante já começar com alguns problemas, e suas solução subsequente, determinados, levando a criação de um \textit{road-map} do produto. Técnica similar é feita no Scrum, onde é mantido o Product Backlog e escolhido apenas um Sprint Backlog para realizar a cada iteração\citep{scrum:sbok:guide}.
+
+Se o quadro é mantido fixo na parede ao longo do projeto, pode ser revisado também a cada iteração.
+
+\subsection{Ordens Alternativas de Preenchimento}
+
+Apesar de ser comum planejar um projeto na ordem inicial Por que, O que e Quem, definindo o contexto para o qual as outras perguntas vão ser respondidas, é possível fazê-lo em outra ordem.
+
+O Software Project Canvas não impõe, então, que seja usada apenas a ordem proposta, e ainda oferece canvas pré-prontos para duas ordens alternativas:
+\begin{itemize}
+    \item iniciar com as Partes Interessadas, encontrar os Problemas e Benefícios que elas tem e só depois projetar o que será o projeto, e
+    \item iniciar com o porquê, descobrir as partes interessadas e então passar para os requisitos.
+\end{itemize}
+
+Essas ordens alternativas representam situações diferentes na vida real. 
+
+Na nossa proposta inicial, apresentada na Figura \ref{fig:spc} supomos que a organização tem problemas ou oportunidades, e a partir daí o projeto é criado e, então, olhando esse quadro, são determinadas todas as partes interessadas. 
+
+Na segunda proposta, primeiro foi identificado que algumas partes interessadas estão descontentes, ou precisam de algo. É provável que estas partes interessadas estejam inclusive presente na reunião, e começar por identificá-las pode ajudar a procurar os problemas e seguir com o projeto. 
+
+Finalmente, na terceira proposta, imaginamos que os problemas foram identificados, e logo depois identificamos quem está envolvido com esses problemas.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{imagens/alternativa2.png}
+    \caption{Forma alternativa onde o projeto se inicia com as partes interessadas. Fonte: imagem do autor}
+    \label{fig:alter2}
+    \end{subfigure}
+    
+    \vspace{1cm}
+    
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{imagens/alternativa3.png}
+    \caption{Forma alternativa onde o projeto se inicia com os problemas e as partes interessadas. Fonte: imagem do autor.}
+    \label{fig:alter3}
+    \end{subfigure}
+    \caption{Desenhos alternativos, que levam a processos alternativos para a fase de Conceber Projeto.}
+    \label{fig:alternativas}
+\end{figure}
+
+Outra situação comum é temos como demanda inicial o "O quê". Nesse caso, não é recomendável começar pelos requisitos, mas sim pelos Problemas ou pelas Partes interessadas, para garantir uma melhor elicitação dos verdadeiros requisitos do projeto.
+
+
+
+\subsection{Verificar Proposta}
+
+A segunda atividade do processo tem como objetivo verificar a correção do \textit{Software Project Canvas} que será apresentado para validação na organização e com as outras partes interessadas.
+
+Nessa fase, os participantes da reunião passam a se preocupar com a correção local e global do canvas, buscando garantir que ele apresenta um projeto coeso, racional e viável. 
+
+Para isso, além de verificações \textit{ad-hoc}, é possível seguir um \textit{check-list} apresentado a seguir.
+\begin{outline}
+    \1 Verificações para os \textit{post-its}
+    \2 Todo \textit{post-it} é claro e pode ser entendido por qualquer leitor ou parte interessada?
+    \2 Todo \textit{post-it} está no quadro a que deve pertencer?
+    \1 Verificações para os quadros
+    \2 Os quadros estão organizados de forma que grupos de \textit{post-its} representem ideias semelhantes e que a importância ou prioridade de cada \textit{post-it} dentro do quadro ou assunto esteja representada?
+    \2 Todos os \textit{post-its} dentro de um quadro estão em um mesmo nível de abstração?
+    \2 Existem, em um quadro, elementos que são um sub-grupo de outro elemento no quadro. Por exemplo, uma parte interessada pode ser ``governo federal'' e outra ``Ministerio da Educação''. Isso é realmente desejado?
+    \1 Verificações para o canvas
+    \2 Todo o canvas está no mesmo nível de abstração?
+    \2 A linguagem é consistente entre os quadros e \textit{post-its}?
+    \2 Todo problema e oportunidade está atendido por meio de um objetivo ou meta?
+    \2 Todo objetivo, e meta, busca atender um problema ou oportunidade? 
+    \2 Toda meta tem uma métrica?
+    \2 Os requisitos funcionais e não-funcionais atendem o Por Que do projeto?
+    \2 As partes interessadas estão envolvidas com algum por que ou algum requisito ou restrição do projeto?
+    \2 Requisitos e entregas deixam as partes interessadas satisfeitas?
+    \2 Os subsídios e premissas são suportados por alguma parte interessada?
+    \2 A equipe consegue atender os requisitos e cumprir as entregas?
+    \2 As entregas atendem o porquê do projeto?
+    \2 Todo risco está associado a alguma premissa, entrega, requisito ou restrição?
+    \2 Toda premissa tem um risco, ou o risco foi pelo menos avaliado e considerado nulo?
+    \2 As estimativas são razoáveis para o projeto e deixam as partes interessadas satisfeitas?
+\end{outline}
+
+\subsection{Validação}
+
+Ao completar a verificação do canvas, é necessário validar o projeto com outras partes da organização, principalmente, com as partes interessadas interessadas que possuem, simultaneamente, poder, urgência e legitimidade sobre o projeto\cite{mitchell_toward_1997}. Para isso, deve ser feito um documento inicial com a proposta do projeto, que pode ser uma cópia do próprio canvas.
+
+Fora da reunião, então, o projeto é validado e possíveis \textit{feedbacks} podem ser trazidos ao grupo original para melhorar, refinar, modificar ou mesmo abandonar o projeto, caso tenham sido encontradas falhas irremediáveis.
+
+
+Este método não define uma forma fixa de se fazer a validação. Inclusive, grupos diferentes em uma mesma organização podem usar formas diferentes de validação. Podem ser usados reuniões, workshops, questionários, entrevistas, etc. 
+
+O resultado dessa validação também não é definido em formato, e depende muito do tipo e da qualidade do \textit{feedback} recebido. A partir do resultado, o grupo responsável por lançar o projeto pode decidir não fazer nada, fazer pequenos ajustes ou voltar a fase de concepção.
+
+\subsection{Compartilhar Projeto}
+
+Na última fase do planejamento o projeto é compartilhado com a organização. Novamente, a forma de fazer isso dependende do projeto, da organização e da parte interessadas sendo atingida.  Pode ser necessário criar um plano de projeto formal para aprovação final em uma reunião anual, ou criar documentos mais ligados a métodos ágeis, como uma  visão do projeto ou um \textit{backlog} do produto para equipe de desenvolvimento, ou uma notícia para o jornal de divulgação interna. 
+
+
+
+
+
 
 \section{Conclusão}
 
 Este artigo apresenta o \textit{Software Project Canvas} um novo canvas para o planejamento ágil de um projeto de software. Ele foi criado para ser usado em substituição a outros canvas destinados ao planejamento inicial de projetos em geral, que são menos adaptados a linguagem e a prática dos desenvolvedores de software. Para a sua  criação foram observados \ref{problems:total} dificuldades encontradas ao ensinar ou utilizar o \textit{Project Model Canvas}, que serviu de fonte de inspiração. As adaptações feitas visam facilitar a explicação e o uso, além de evitar perda de tempo com discussões que não adiantam a definição do projeto.
 
 No futuro será feita uma avaliação do uso do canvas em sala de aula e em projetos de software, a fim de validar as modificações feitas.
+
+
 
 \section*{Agradecimentos}
 
