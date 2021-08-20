@@ -1,0 +1,12 @@
+
+*.xml
+*.out
+*.blg
+*.bbl
+*.aux
+*.bcf
+*.log
+main.synctex.gz
+*.toc
+softwareprojectcanvas.synctex.gz
+*.lof
