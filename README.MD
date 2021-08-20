@@ -6,4 +6,4 @@ Para a sua  criação foram observadas \ref{problems:total} dificuldades  ao ens
 
 As modificações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo, durante a reunião de concepção do projeto, com discussões semânticas sobre o significado das coisas que não adiantam a definição do projeto.
 
-(imagens/alternativa1.png)
+![Software Project Canvas](imagens/alternativa1.png "Software Project Canvas")
