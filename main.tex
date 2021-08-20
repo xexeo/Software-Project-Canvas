@@ -12,7 +12,7 @@
 \newcommand{\othersize}{0.7\linewidth}
 \usepackage{indentfirst}
 \usepackage{caption}
-\captionsetup{font=footnotesize}
+\captionsetup{font={footnotesize,bf},justification=centering,margin=1cm}
 \usepackage{hyperref}
 
 \title{Software Project Canvas v1.0}
@@ -126,7 +126,7 @@ Para resolver essas dificuldades, este artigo propõe o uso do \textit{Software 
 
 Como resultado, o processo é transformado de 12 para 9 passos, já que mesmo em áreas separadas no canvas os requisitos são todos levantados no mesmo momento, facilitando sua explicação. Além disso, são evitadas muitas discussões desnecessárias, como onde colocar algo que tanto pode ser visto como uma restrição ou como um requisito não-funcional, por diferentes partes interessadas.
 
-\section{A fase de Concepção do \textit{Software Project Canvas}}
+\section{O \textit{Software Project Canvas}}
 
 Para desenvolver o \textit{Project Model Canvas}, é adotada  mesma metodologia de quatro passos proposta por \citet{finocchio:2013}. Nessa metodologia, a fase de concepção é alterada de forma a atender as características do \textit{Software Project Canvas}, tendo 9 passos, para preencher 10 quadros, que serão descritos a seguir.
 
@@ -302,6 +302,8 @@ Exemplo de riscos: não conseguir contratar cinco novos funcionários com a habi
 Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-mês ou homem hora. No momento da reunião onde o canvas é usado, não é possível ainda usar uma técnica fortemente quantitativa para isso, como o COCOMO II\citep{Boehm:cocomo2}, pois não se espera que seja possível nem estimar o tamanho real do software, então isso deve ser feito a partir da experiência do grupo, com comparações com projetos anteriores. 
 
 Técnicas adequadas nesse ponto são variações do método de Delphi\citep{delphi:1966}, como o \textit{Planning Poker}\citep{mike:agile:estimating}, ou uso de heurísticas como buscar previsões pessimistas ($P$), médias ($M$) e otimistas ($O$) e calcular uma média ponderada ($M_p=\frac{P+4\times M+O}{6})$\citep{pmbok:6}.
+
+\section{A Metodologia}
 
 \section{Conclusão}
 
