@@ -9,7 +9,7 @@
 \addbibresource{bibs/bibliografia.bib}
 \addbibresource{bibs/bibdoslivrosesas.bib}
 \addbibresource{bibs/standards.bib}
-\newcommand{\othersize}{0.6\textwidth}
+\newcommand{\othersize}{0.7\linewidth}
 \usepackage{indentfirst}
 \usepackage{caption}
 \captionsetup{font=footnotesize}
@@ -27,23 +27,23 @@
 
 Para a sua  criação foram observadas \ref{problems:total} dificuldades  ao ensinar ou utilizar o \textit{Project Model Canvas} no contexto de projetos de software.
 
-As adaptações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo com discussões que não adiantam a definição do projeto.
+As modificações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo, durante a reunião de concepção do projeto, com discussões semânticas sobre o significado das coisas que não adiantam a definição do projeto.
 \end{abstract}
 
 \section{Introducão}
 
 Esse artigo apresenta o Software Project Canvas (SPC), representado na Figura \ref{fig:spc}, uma ferramenta ágil cujo objetivo é facilitar a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
 
-\begin{figure}[hbt]
+\begin{figure*}[hbt]
     \centering
     \includegraphics[width=\textwidth]{imagens/Software Project Canvas Yasmin 1.png}
     \caption{O Software Project Canvas. Imagem do autor}
     \label{fig:spc}
-\end{figure}
+\end{figure*}
 
-O \textit{Software Project Canvas} foi motivado por certas dificuldades em ensinar e usar o \textit{Project Model Canvas} no contexto de Engenharia de Sofware. Após identificar essas dificuldades, foram feitas propostas de correção, e variações do modelo foram avaliadas por alguns especialistas.
+O \textit{Software Project Canvas} foi motivado por certas dificuldades em ensinar e usar o \textit{Project Model Canvas} no contexto de Engenharia de Sofware. Após identificar essas dificuldades, foram feitas propostas de correção, e variações do modelo foram avaliadas por alguns especialistas e iniciantes na área. 
 
-O artigo contém 6 seções. A próxima seção apresenta o que são canvas, a terceira seção explica a relação entre projetos, agilidade e o uso de canvas, resultando em uma breve descrição do Project Model Canvas. A quarta seção apresenta a proposta do Software Project Canvas, e a sexta seção apresenta a conclusão.
+O artigo contém 6 seções. A próxima seção apresenta o que são canvas, a terceira seção explica a relação entre projetos, agilidade e o uso de canvas, terminando com uma breve descrição do Project Model Canvas. A quarta seção apresenta a proposta do Software Project Canvas, e a sexta seção apresenta a conclusão.
 
 \section{O que são Canvas}
 
@@ -53,7 +53,7 @@ Alguns autores\citep{finocchio:2013} associam os canvas a neuro-ciência, tanto 
 
 O primeiro canvas de grande impacto na indústria foi o \textit{Business Model Canvas}, proposto por \citet{osterwalder2010business}, apresentado ainda vazio na Figura \ref{fig:bmc}. Ele é destinado ao planejamento de um modelo de negócio para um empreendimento. Nele, cada área receberá, em uma ordem pré-estabelecida e ao longo de uma reunião facilitada, \textit{post-its} que dão respostas as perguntas indicadas nos quadros. Por exemplo, no quadro ``Customer Segments'' pode aparecer um \textit{post-it} onde está escrito ``adolescentes praticantes de Skate''.
 
-A partir do sucesso do \textit{Business Model Canvas}, vários outros canvas foram propostos por pesquisadores, consultores ou pessoas interessadas em algum problema específico. No Brasil, \citeauthor{finocchio:2013} propôs, com bastante sucesso, o \textit{Project Model Canvas}\citep{finocchio:2013}, que serviu de inspiração para nossa proposta. 
+A partir do sucesso do \textit{Business Model Canvas},  outros canvas foram propostos por pesquisadores, consultores ou pessoas interessadas em algum problema específico. No Brasil, \citeauthor{finocchio:2013} propôs, com bastante sucesso, o \textit{Project Model Canvas}\citep{finocchio:2013}, que serviu de inspiração para nossa proposta. 
 
 \begin{figure}
     \centering
@@ -62,29 +62,32 @@ A partir do sucesso do \textit{Business Model Canvas}, vários outros canvas for
     \label{fig:bmc}
 \end{figure}
 
+
 \section{Projetos, Agilidade e Canvas}
 
 A Gestão de Projetos é uma área de conhecimento essencial ao sucesso de um projeto. Segundo \citet{kerzner:12ed}, um projeto tem sucesso se 
-acaba dentro do prazo, do orçamento, com o desempenho especificado, aceito pelos clientes e usuários, com mudanças mínimas no escopo acordadas entre as partes interessadas, sem causar distúrbio ao fluxo de trabalho da organização e, quando desejado, sem mudar a cultura da organização. Além disso, é necessário satisfazer as partes interessadas\citep{pmbok:6}. Claramente, para alcançar todos esses objetivos é necessário planejar, monitorar e controlar o projeto ao longo de sua realização.
+acaba no prazo, dentro do orçamento, com o desempenho especificado, aceito pelos clientes e usuários, com mudanças mínimas no escopo acordadas entre as partes interessadas, sem causar distúrbio ao fluxo de trabalho da organização e, quando desejado, sem mudar a cultura da organização. Além disso, é necessário satisfazer as partes interessadas\citep{pmbok:6}. Para alcançar todos esses objetivos é necessário planejar, monitorar e controlar o projeto ao longo de sua realização.
 
-Ao longo dos anos, a área de gestão de projetos desenvolveu processos eficazes e reconhecidos, sendo que muitos foram consolidados em padrões ou livros de referência \citep{pmbok:6,kerzner:12ed}. A Engenharia de Software, disciplina relativamente nova em relação as outras disciplinas onde esses processos foram desenvolvidos, foi criada com o intuito de aplicar as práticas de Engenharia ao desenvolvimento de software, incluindo as práticas de gestão\citep{naur:randell:1968,pressman:2019}.
+Ao longo dos anos, a área de gestão de projetos desenvolveu processos eficazes e reconhecidos, sendo que muitos foram consolidados em padrões ou livros de referência \citep{pmbok:6,kerzner:12ed}. A Engenharia de Software, disciplina relativamente nova em relação as outras disciplinas onde esses processos foram desenvolvidos, foi criada com o intuito de aplicar as práticas de Engenharia ao desenvolvimento de software, incluindo as práticas de gestão\citep{naur:randell:1968,pressman:2019,ieee_computer_society_guide_2014}.
 
-Algumas dessas práticas, ou seus princípios, porém, começaram a ser contestadas por não serem adequadas ao desenvolvimento de software, exigirem uma carga muito alta de trabalho adicional (\textit{overhead} alto), ou exigirem muitos documentos, principalmente com o aparecimento de processos de desenvolvimento de software mais leves, que acabaram sendo nomeados métodos ágeis ou enxutos. Essa contestação acabou por acontecer em toda a indústria, como mostra a ampla adoção dos métodos ágeis e enxutos por outras áreas. Entre os princípios que não funcionaram na Engenharia de Software está o da execução de projetos de forma sequencial, onde uma fase é realizada de forma completa e fornece subsídios para a próxima fase, sendo a entrega feita no final, o que é conhecido como Processo em Cascata. Atualmente, há ampla convicção que é essencial usar processos iterativos e incrementais, onde as entregas são pequenas e feitas ao longo do projeto, principalmente devido a sua maior taxa de sucesso\citep{pressman:2019,chaos:2015}.
+Com a experiência de desenvolver software sob a pressão do mundo de negócios, algumas dessas práticas, ou seus princípios,  começaram a ser contestadas por não serem adequadas ao desenvolvimento de software, exigirem uma carga muito alta de trabalho adicional (\textit{overhead} alto), ou exigirem muitos documentos. Isso resultou no fortalecimento dos defensores de processos de desenvolvimento de software mais leves, que acabaram sendo nomeados métodos ágeis ou enxutos. Essa mudança acabou por afetar toda a indústria, como mostra a ampla adoção dos métodos ágeis e enxutos por outras áreas. 
 
-Uma prática comum dos métodos ágeis é o uso de quadros brancos com áreas delimitadas por assunto, indicando, de forma transparente a todos, alguma informação controlada  por meio do quadro. O mais famoso desses quadros é provavelmente o Quadro \textit{Kanbam}, adaptado para o processo \textit{Scrum}\citep{scrum:sbok:guide}, apresentado em uma forma simplificada na Figura \ref{fig:kanbam}. O Kanbam é um método de produção que pode ser considerado um predecessor dos métodos ágeis e faz  parte de um conjunto de práticas utilizadas na Toyota e que iniciou uma revolução de conceitos de produção e qualidade, alterando o até então paradigma \textit{Fordista} de produção. Outros métodos adotaram quadros semelhantes, como o SEMAT \citep{jacobson_essentials_2019}, que usa cartas pré-definidas posicionadas no quadro para indicar o estado de um processo.
+Entre os princípios que não funcionaram na Engenharia de Software está o da execução de projetos de forma sequencial, onde uma fase é realizada de forma completa e fornece subsídios para a próxima fase, sendo a entrega feita, em sua totalidade, no final do projeto, o que é conhecido como Processo em Cascata. Atualmente, há ampla convicção que é essencial usar processos iterativos e incrementais, onde as entregas são pequenas e feitas ao longo do projeto, principalmente devido a sua maior taxa de sucesso\citep{pressman:2019,chaos:2015}.
 
-Na Figura \ref{fig:kanbam} também é possível notar que o quadro não precisa ser feito de forma impressa, podendo ser simplesmente desenhado em um quadro branco, ou mesmo na parede com fitas, e como os \textit{post-its} são usados, nesse caso para indicar tarefas a fazer, sendo feitas e prontas.
+Uma prática comum dos métodos ágeis é o uso de quadros brancos com áreas delimitadas por assunto, indicando, de forma transparente a todos, alguma informação controlada  por meio do quadro. O mais famoso desses quadros é provavelmente o a adaptação, para o processo \textit{Scrum}\citep{scrum:sbok:guide}, do \textit{Kanban}, apresentado em uma forma simplificada na Figura \ref{fig:kanban}. O Kanban é um método de produção que pode ser considerado um predecessor dos métodos ágeis e faz  parte de um conjunto de práticas utilizadas na Toyota e que iniciou uma revolução de conceitos de produção e qualidade, alterando o até então paradigma \textit{Fordista} de produção\citep{gross:2003:kanban}. Outros métodos adotaram quadros semelhantes, como o SEMAT \citep{jacobson_essentials_2019}, que usa cartas pré-definidas posicionadas no quadro para indicar o estado de um processo. 
+
+Na Figura \ref{fig:kanban} também é possível notar que o quadro não precisa ser feito de forma impressa, podendo ser simplesmente desenhado em um quadro branco, ou mesmo na parede com fitas, e como os \textit{post-its} são usados, nesse caso para indicar tarefas a fazer, sendo feitas e prontas.
 
 \begin{figure}
     \centering
     \includegraphics[width=\othersize]{imagens/Simple-kanban-board-.jpg}
-    \caption{Um quadro Scrum/Kanbam muito simples. Fonte:  por Jess Iasovski, CC BY-SA 3.0 }
-    \label{fig:kanbam}
+    \caption{Um quadro Scrum/Kanban muito simples. Fonte:  por Jess Iasovski, CC BY-SA 3.0 }
+    \label{fig:kanban}
 \end{figure}
 
 \subsection{O \textit{Project Model Canvas}}
 
-O \textit{Project Model Canvas}\citep{finocchio:2013}, apresentado na Figura \ref{fig:pmcp}, é um canvas destinado ao planejamento inicial de um projeto, baseado em uma metodologia de 4 grandes passos, descrita na Figura \ref{fig:pmcp}. Ele possui 12 quadros que são preenchidas passo a passo na etapa de Concepção,  aprimorados nas fases de Integração e Revisão, e depois comunicadas na fase de Compartilhamento. Sendo destinado a qualquer tipo de projeto, pode ser também aplicado a projetos de software, porém não necessariamente de forma perfeita.
+O \textit{Project Model Canvas}\citep{finocchio:2013}, apresentado na Figura \ref{fig:pmcp}, é um canvas destinado ao planejamento inicial de um projeto, baseado em uma metodologia de 4 grandes passos, descrita na Figura \ref{fig:pmcp}. Ele possui 12 quadros que são preenchidas passo a passo na etapa de Concepção,  aprimorados nas fases de Integração e Revisão, e depois tem seu resultado comunicado as partes interessadas na fase de Compartilhamento. Sendo destinado a qualquer tipo de projeto, pode ser também aplicado a projetos de software, porém não necessariamente de forma perfeita.
 
 \begin{figure}
     \centering
@@ -93,17 +96,18 @@ O \textit{Project Model Canvas}\citep{finocchio:2013}, apresentado na Figura \re
     \label{fig:pmcp}
 \end{figure}
 
-Esse canvas é uma abordagem típica de projetos ágeis ou enxutos, aplicada ao planejamento de projetos de qualquer tipo. Isso é, simultaneamente, uma vantagem e uma desvantagem do \textit{Project Model Canvas}, já que, sendo geral, pode ser aplicado com sucesso em qualquer área, mas não sendo específico, acaba por ter algumas incompatibilidades com projetos de áreas específicas, como especialmente a Engenharia de Software.
+Esse canvas é uma abordagem típica de projetos ágeis ou enxutos, aplicada ao planejamento de projetos de qualquer tipo. Isso é, simultaneamente, uma vantagem e uma desvantagem do \textit{Project Model Canvas}, já que, sendo geral, pode ser aplicado com sucesso em qualquer área, mas não sendo específico, acaba por ter algumas incompatibilidades com projetos de áreas específicas, como, e em especial, a Engenharia de Software.
+
+Projetos de software têm características diferentes de projetos tradicionais que afetam diretamente o planejamento. Entre elas, podemos citar: a dificuldade de medir ou prever o tamanho da entrega, medido em esforço ou em prazo\citeauthor{mike:agile:estimating,cocomo2:manual,pressman:2019}, a necessidade de aprendizado da equipe em relação ao domínio da aplicação ao longo do projeto, a má-adequação às formas tradicionais e hierárquicas de equipe\citep{Constantine1993}. Essas e outras características que diferenciam o projeto de desenvolvimento de software afetam diretamente a capacidade de planejamento, exigindo estratégias diferenciadas em relação as estratégias tradicionais.
 
 Ao ensinar e usar o \textit{Project Model Canvas} para o planejamento de projetos de desenvolvimento de software, notei algumas dificuldades dos alunos e praticantes com os quadros, listadas a seguir.
 
 \begin{enumerate}
-    \item A dificuldade de separar o pitch do produto e do objetivo SMART.
-    \item A dificuldade de entender a diferença entre o Objetivo SMART e o Produto;
-    \item A limitação a apenas um objetivo SMART para o software, quando é comum softwares atenderem várias funcionalidades que são normalmente interpretadas como objetivos;
+    \item A dificuldade de separar o pitch do produto e do objetivo SMART, e depois separar este do produto. Essas duas primeiras dificuldades advêm do fato de ser realmente difícil diferenciar o produto específico sendo criado do objetivo para o qual é criado. Isso, porém, pode não ser necessário no projeto de software, já que justificativas, benefícios e requisitos cumprem bem esse papel.
+    \item A limitação a apenas um objetivo SMART para o software, quando é comum softwares atenderem várias funcionalidades que são normalmente criadas para atender objetivos;
     \item A dificuldade de separar requisitos não-funcionais de restrições;
-    \item A não separação dos requisitos entre funcionais e não funcionais, tradicional na área de software, e importante no projeto de software;
-    \item Um excesso de esforço na separação entre grupos de entregas e linha do tempo, que ainda muitas vezes obriga a re-arranjar entregas ou requisitos, e,
+    \item A não separação dos requisitos entre funcionais e não funcionais, tradicional na área de software, e importante no projeto de software, o que afeta diretamente a capacidade de estimar os custos do software, já que a prática mais frequente, formalizada nos Pontos de Função\citep{ifpug:guide:2012} e no COCOMO II\citeauthor{cocomo2:manual}, implica em calcular a funcionalidede entregue e depois melhorar a estimativa a partir de exigências feitas pelos requisitos não funcionais.
+    \item Um excesso de esforço na separação entre grupos de entregas e linha do tempo, que ainda muitas vezes obriga a re-arranjar entregas ou requisitos, quando as práticas mais atuais, por exemplo baseadas em \textit{road-maps} do produto, tomam essa decisão de forma simultânea.
     \item \label{problems:total} A dificuldade de procurar custos, já que basicamente todo custo de um projeto de software vem da mão de obra, ou seja, do esforço necessário para desenvolve-lo, geralmente medido em pessoas-mês ou pessoas-hora.
 \end{enumerate}
 
