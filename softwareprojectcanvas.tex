@@ -40,7 +40,7 @@ As modificações feitas visam facilitar a explicação e o uso de um canvas no 
 
 \section{Introducão}
 
-Esse artigo apresenta o Software Project Canvas (SPC), representado na Figura \ref{fig:spc}, uma ferramenta ágil cujo objetivo é facilitar a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
+Esse artigo apresenta o Software Project Canvas\footnote{Este documento e arquivos com o Software Project Canvas podem ser encontrados em \url{https://github.com/xexeo/Software-Project-Canvas}}, representado na Figura \ref{fig:spc}, uma ferramenta ágil cujo objetivo é facilitar a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
 
 \begin{figure*}[hbt]
     \centering
@@ -49,19 +49,19 @@ Esse artigo apresenta o Software Project Canvas (SPC), representado na Figura \r
     \label{fig:spc}
 \end{figure*}
 
-O \textit{Software Project Canvas} foi motivado por certas dificuldades em ensinar e usar o \textit{Project Model Canvas} no contexto de Engenharia de Sofware. Após identificar essas dificuldades, foram feitas propostas de correção, e variações do modelo foram avaliadas por alguns especialistas e iniciantes na área. 
+O \textit{Software Project Canvas} foi motivado por certas dificuldades em ensinar e usar o \textit{Project Model Canvas} no contexto de Engenharia de Sofware. Após identificar essas dificuldades, foram feitas propostas de correção, e variações do modelo foram avaliadas por alguns especialistas e iniciantes na área.
 
 O artigo contém 6 seções. A próxima seção apresenta o que são canvas, a terceira seção explica a relação entre projetos, agilidade e o uso de canvas, terminando com uma breve descrição do Project Model Canvas. A quarta seção apresenta a proposta do Software Project Canvas, e a sexta seção apresenta a conclusão.
 
 \section{O que são Canvas}
 
-Canvas são ferramentas colaborativas que servem de ponto focal em uma atividade onde algo vai ser, controlado, decidido ou planejado. São compostos de um quadro branco dividido em várias áreas, cada uma representando uma pergunta, assunto ou tópico em discussão, onde são colocados \textit{post-its} contendo a informação desejada. 
+Canvas são ferramentas colaborativas que servem de ponto focal em uma atividade onde algo vai ser, controlado, decidido ou planejado. São compostos de um quadro branco dividido em várias áreas, cada uma representando uma pergunta, assunto ou tópico em discussão, onde são colocados \textit{post-its} contendo a informação desejada.
 
 Alguns autores\citep{finocchio:2013} associam os canvas a neuro-ciência, tanto por usar de características de agrupamento e proximidade que auxiliam a compreensão dos conceitos, como por apoiarem uma atividade colaborativa que tende a criar engajamento nos membros da reunião em torno do assunto.
 
 O primeiro canvas de grande impacto na indústria foi o \textit{Business Model Canvas}, proposto por \citet{osterwalder2010business}, apresentado ainda vazio na Figura \ref{fig:bmc}. Ele é destinado ao planejamento de um modelo de negócio para um empreendimento. Nele, cada área receberá, em uma ordem pré-estabelecida e ao longo de uma reunião facilitada, \textit{post-its} que dão respostas as perguntas indicadas nos quadros. Por exemplo, no quadro ``Customer Segments'' pode aparecer um \textit{post-it} onde está escrito ``adolescentes praticantes de Skate''.
 
-A partir do sucesso do \textit{Business Model Canvas},  outros canvas foram propostos por pesquisadores, consultores ou pessoas interessadas em algum problema específico. No Brasil, \citeauthor{finocchio:2013} propôs, com bastante sucesso, o \textit{Project Model Canvas}\citep{finocchio:2013}, que serviu de inspiração para nossa proposta. 
+A partir do sucesso do \textit{Business Model Canvas},  outros canvas foram propostos por pesquisadores, consultores ou pessoas interessadas em algum problema específico. No Brasil, \citeauthor{finocchio:2013} propôs, com bastante sucesso, o \textit{Project Model Canvas}\citep{finocchio:2013}, que serviu de inspiração para nossa proposta.
 
 \begin{figure}
     \centering
@@ -73,16 +73,16 @@ A partir do sucesso do \textit{Business Model Canvas},  outros canvas foram prop
 
 \section{Projetos, Agilidade e Canvas}
 
-A Gestão de Projetos é uma área de conhecimento essencial ao sucesso de um projeto. Segundo \citet{kerzner:12ed}, um projeto tem sucesso se 
+A Gestão de Projetos é uma área de conhecimento essencial ao sucesso de um projeto. Segundo \citet{kerzner:12ed}, um projeto tem sucesso se
 acaba no prazo, dentro do orçamento, com o desempenho especificado, aceito pelos clientes e usuários, com mudanças mínimas no escopo acordadas entre as partes interessadas, sem causar distúrbio ao fluxo de trabalho da organização e, quando desejado, sem mudar a cultura da organização. Além disso, é necessário satisfazer as partes interessadas\citep{pmbok:6}. Para alcançar todos esses objetivos é necessário planejar, monitorar e controlar o projeto ao longo de sua realização.
 
 Ao longo dos anos, a área de gestão de projetos desenvolveu processos eficazes e reconhecidos, sendo que muitos foram consolidados em padrões ou livros de referência \citep{pmbok:6,kerzner:12ed}. A Engenharia de Software, disciplina relativamente nova em relação as outras disciplinas onde esses processos foram desenvolvidos, foi criada com o intuito de aplicar as práticas de Engenharia ao desenvolvimento de software, incluindo as práticas de gestão\citep{naur:randell:1968,pressman:2019,ieee_computer_society_guide_2014}.
 
-Com a experiência de desenvolver software sob a pressão do mundo de negócios, algumas dessas práticas, ou seus princípios,  começaram a ser contestadas por não serem adequadas ao desenvolvimento de software, exigirem uma carga muito alta de trabalho adicional (\textit{overhead} alto), ou exigirem muitos documentos. Isso resultou no fortalecimento dos defensores de processos de desenvolvimento de software mais leves, que acabaram sendo nomeados métodos ágeis ou enxutos. Essa mudança acabou por afetar toda a indústria, como mostra a ampla adoção dos métodos ágeis e enxutos por outras áreas. 
+Com a experiência de desenvolver software sob a pressão do mundo de negócios, algumas dessas práticas, ou seus princípios,  começaram a ser contestadas por não serem adequadas ao desenvolvimento de software, exigirem uma carga muito alta de trabalho adicional (\textit{overhead} alto), ou exigirem muitos documentos. Isso resultou no fortalecimento dos defensores de processos de desenvolvimento de software mais leves, que acabaram sendo nomeados métodos ágeis ou enxutos. Essa mudança acabou por afetar toda a indústria, como mostra a ampla adoção dos métodos ágeis e enxutos por outras áreas.
 
 Entre os princípios que não funcionaram na Engenharia de Software está o da execução de projetos de forma sequencial, onde uma fase é realizada de forma completa e fornece subsídios para a próxima fase, sendo a entrega feita, em sua totalidade, no final do projeto, o que é conhecido como Processo em Cascata. Atualmente, há ampla convicção que é essencial usar processos iterativos e incrementais, onde as entregas são pequenas e feitas ao longo do projeto, principalmente devido a sua maior taxa de sucesso\citep{pressman:2019,chaos:2015}.
 
-Uma prática comum dos métodos ágeis é o uso de quadros brancos com áreas delimitadas por assunto, indicando, de forma transparente a todos, alguma informação controlada  por meio do quadro. O mais famoso desses quadros é provavelmente o a adaptação, para o processo \textit{Scrum}\citep{scrum:sbok:guide}, do \textit{Kanban}, apresentado em uma forma simplificada na Figura \ref{fig:kanban}. O Kanban é um método de produção que pode ser considerado um predecessor dos métodos ágeis e faz  parte de um conjunto de práticas utilizadas na Toyota e que iniciou uma revolução de conceitos de produção e qualidade, alterando o até então paradigma \textit{Fordista} de produção\citep{gross:2003:kanban}. Outros métodos adotaram quadros semelhantes, como o SEMAT \citep{jacobson_essentials_2019}, que usa cartas pré-definidas posicionadas no quadro para indicar o estado de um processo. 
+Uma prática comum dos métodos ágeis é o uso de quadros brancos com áreas delimitadas por assunto, indicando, de forma transparente a todos, alguma informação controlada  por meio do quadro. O mais famoso desses quadros é provavelmente o a adaptação, para o processo \textit{Scrum}\citep{scrum:sbok:guide}, do \textit{Kanban}, apresentado em uma forma simplificada na Figura \ref{fig:kanban}. O Kanban é um método de produção que pode ser considerado um predecessor dos métodos ágeis e faz  parte de um conjunto de práticas utilizadas na Toyota e que iniciou uma revolução de conceitos de produção e qualidade, alterando o até então paradigma \textit{Fordista} de produção\citep{gross:2003:kanban}. Outros métodos adotaram quadros semelhantes, como o SEMAT \citep{jacobson_essentials_2019}, que usa cartas pré-definidas posicionadas no quadro para indicar o estado de um processo.
 
 Na Figura \ref{fig:kanban} também é possível notar que o quadro não precisa ser feito de forma impressa, podendo ser simplesmente desenhado em um quadro branco, ou mesmo na parede com fitas, e como os \textit{post-its} são usados, nesse caso para indicar tarefas a fazer, sendo feitas e prontas.
 
@@ -151,7 +151,7 @@ O Software Project Canvas utiliza 10 quadros, que serão descritos nesta seção
 
 Todo projeto se inicia porque há algum problema a ser resolvido ou uma oportunidade a ser aproveitada. Ou seja, se deseja uma mudança no estado da organização. Nas discussões sobre projetos de software, os problemas logo aparecem na forma de descontentamento com um sistema atual que funciona com falhas, erros ou não-conformidades.
 
-Um problema é uma diferença entre um estado percebido e um estado desejado que deverá ser tratada pelo projeto. São dificuldades a serem resolvidas, desvios de um padrão, regulamento ou lei, falta de capacidade de realizar uma tarefa, etc. 
+Um problema é uma diferença entre um estado percebido e um estado desejado que deverá ser tratada pelo projeto. São dificuldades a serem resolvidas, desvios de um padrão, regulamento ou lei, falta de capacidade de realizar uma tarefa, etc.
 
 Problemas trazem prejuízo, sejam eles financeiros ou de outra forma, como impacto na imagem da empresa. Quando esses prejuízos podem ser medidos, deve ser indicada a forma de medi-los, de maneira que isso possa ser usado para verificar os benefícios que o projeto trará.
 
@@ -159,7 +159,7 @@ Os problemas podem ser divididos de várias formas. Uma delas é entender que ex
 
 Problemas podem ser descobertos e priorizados com uso de método de Pareto. É possível, porém, que o método de Pareto detecte apenas os sintomas. Por exemplo, se usarmos o método de Pareto para analisar as reclamações feitas em um restaurante, podemos descobrir que a maioria é sobre o excesso de tempo de espera na fila. Porém, esse não é o verdadeiro problema, mas sim um sintoma causado por, entre outras coisas, a demora em fechar uma conta. Para identificar as causas-raiz dos problemas, ou seja, o verdadeiro problema que deve ser resolvido, podem ser usadas técnicas como o Diagrama de Espinha de Peixe, ou os 5 Porquês\citep{gray:2010}. Existem outras técnicas disponíveis, principalmente na literatura de Controle de Qualidade em geral ou Qualidade de Software.
 
-Já as oportunidades são percepções que algo pode ser feito para que a organização tenha uma vantagem em relação ao estado atual. Oportunidades podem ser levantadas de várias formas, incluindo o uso de \textit{brainstorming}\citep{tracy:2015}. 
+Já as oportunidades são percepções que algo pode ser feito para que a organização tenha uma vantagem em relação ao estado atual. Oportunidades podem ser levantadas de várias formas, incluindo o uso de \textit{brainstorming}\citep{tracy:2015}.
 
 Problemas e oportunidades podem ser priorizados por meio de técnicas como MoSCoW\citep{dsdm:2nd} e dot-voting\citep{gray:2010}.
 
@@ -173,7 +173,7 @@ Nesta seção do \textit{Software Project Canvas} serão apresentadas as melhori
 
 Objetivos são mudanças que desejamos na organização. Esses objetivos devem ser SMART, isto é: e\textbf{S}pecíficos, \textbf{M}ensuráveis, \textbf{A}lcançáveis, \textbf{R}ealistas ou \textbf{R}ealizáveis, e delimitados no \textbf{T}empo. Por exemplo, construir um muro (S), de 2 metros de altura (M), com tijolos (A), a um preço de R\$2000,00 (R), em um mês(T).
 
-Metas são resultados que esperamos quando houver a mudança trazida pelo projeto, ou seja, os benefícios trazidos ao negócio por termos alcançados os objetivos. Metas precisam de medidas, subjetivas ou objetivas, também chamadas de qualitativas ou quantitativas, associadas a elas. Por exemplo, o muro pode ter sido colocado para diminuir a quantidade de pessoas que entra em um local, o que pode ser contado, ou para aumentar a sensação de segurança dos moradores, o que é um sentimento subjetivo. Cada objetivo deve ter pelo menos uma meta, e cada meta uma forma de avaliar\cite{ruble_practical_1997}. 
+Metas são resultados que esperamos quando houver a mudança trazida pelo projeto, ou seja, os benefícios trazidos ao negócio por termos alcançados os objetivos. Metas precisam de medidas, subjetivas ou objetivas, também chamadas de qualitativas ou quantitativas, associadas a elas. Por exemplo, o muro pode ter sido colocado para diminuir a quantidade de pessoas que entra em um local, o que pode ser contado, ou para aumentar a sensação de segurança dos moradores, o que é um sentimento subjetivo. Cada objetivo deve ter pelo menos uma meta, e cada meta uma forma de avaliar\cite{ruble_practical_1997}.
 Todo objetivo, e suas metas, deve endereçar um item que aparece na justificativa\cite{finocchio:2013}.
 
 Uma das várias formas de buscar benefícios é usar a heurística IRACIS\footnote{Increase Revenue, Avoid Costs and Improve Service}, que os divide em 3 tipos: aumentar receitas, evitar cursos e melhorar serviços.
@@ -186,7 +186,7 @@ Segundo a norma ISO/IEC/IEEE 24765:2017, `` um requisito é uma condição ou ca
 
 Requisitos podem ser divididos em dois grandes grupos: funcionais ou não-funcionais. Restrições são tipos especiais de requisitos funcionais impostos ao projeto. Requisitos funcionais dizem que funcionalidade o software entrega, na prática, que funcionalidades o usuário exige do software. Já requisitos não-funcionais especificam como essas funcionalidades devem acontecer ou desempenhar. Requisitos funcionais são, em geral, independentes de tecnologias.
 
-Os Requisitos Não-Funcionais, Restrições e Requisitos Funcionais podem ser levantados no mesmo passo, apesar de haver uma separação no quadro. Isso facilita a discussão do que deve ser entregue, pois não é necessário dizer ``guarde esse requisito para o próximo passo''. 
+Os Requisitos Não-Funcionais, Restrições e Requisitos Funcionais podem ser levantados no mesmo passo, apesar de haver uma separação no quadro. Isso facilita a discussão do que deve ser entregue, pois não é necessário dizer ``guarde esse requisito para o próximo passo''.
 
 \subsubsection{Requisitos Funcionais}
 
@@ -249,9 +249,9 @@ Alguns papéis são esperados\citeauthor{finocchio:2013}, como o gerente do proj
 \subsection{Subsídios e Premissas}
 Nesta seção do \textit{Software Project Canvas} devem aparecer tudo necessário para que o projeto tenha sucesso. Tipicamente, em projetos de software, subsídios e premissas estão ligados ao acesso da equipe as P.I., e a participação das mesmas quando necessário. Também é comum que existam premissas ligadas a disponibilidade da infraestrutura necessária para o sucesso do projeto. Em muitos projetos também é necessário tratar aqui a disponibilidade financeira.
 
-Premissas e subsídios são garantidas pelas partes interessadas, em favor da equipe. Caso uma parte interessada não cumpra seu compromisso em garantir a premissa, ocorre um risco do projeto. Assim, a análise de risco deve considerar todas as premissas feitas. 
+Premissas e subsídios são garantidas pelas partes interessadas, em favor da equipe. Caso uma parte interessada não cumpra seu compromisso em garantir a premissa, ocorre um risco do projeto. Assim, a análise de risco deve considerar todas as premissas feitas.
 
-Exemplo de premissas ou subsídios: os computadores novos serão entregues dia 15 de maio, os computadores possuirão uma placa gráfica compatível com a NVidia 3060, serão contratados cinco novos programadores, o patrocinador disponibilizará 4 horas por semana para o projeto. 
+Exemplo de premissas ou subsídios: os computadores novos serão entregues dia 15 de maio, os computadores possuirão uma placa gráfica compatível com a NVidia 3060, serão contratados cinco novos programadores, o patrocinador disponibilizará 4 horas por semana para o projeto.
 
 \subsection{Entregas}
 
@@ -265,7 +265,7 @@ Em cada entrega é entregue um conjunto de funcionalidades, ou seja, são cumpri
 
 Entregas também podem ser desenvolvidas, mais tarde, ou como resultado intermediário para gerar o \textit{Software Project Canvas}, por meio de uma Estrutura Analítica de Projeto (EAP), também conhecida pelo nome em inglês, que faz mais sentido, \textit{Work Breakdown Structure (WBS)}. Nesse caso, deve ser seguida a abordagem de criar uma hierarquia de entregas, e não de processos.
 
-Exemplos de entregas: lista de livros, seleção e compra - em 40 dias; relatórios de acompanhamento - em mais 20 dias, sistema de recomendação - em 60 dias; 
+Exemplos de entregas: lista de livros, seleção e compra - em 40 dias; relatórios de acompanhamento - em mais 20 dias, sistema de recomendação - em 60 dias;
 
 \subsection{Riscos}
 
@@ -274,13 +274,13 @@ Riscos são incertezas que podem influenciar o resultado do projeto. Atualmente 
 
 É importante para a gestão do projeto gerenciar o risco, para isso devem ser conhecidos sua causa, isto é, porque ele acontece, sua probabilidade de ocorrer e seu impacto. Com isso é possível calcular o efeito do risco no projeto.
 
-Os riscos podem ser aceitos desprezados, por terem um impacto baixo, aceitos e gerenciados, mitigados, ou, ainda, eliminados ou transferidos. Essas ações foram listadas do que deve ser feito para os riscos de impacto mais baixo até o mais alto. 
+Os riscos podem ser aceitos desprezados, por terem um impacto baixo, aceitos e gerenciados, mitigados, ou, ainda, eliminados ou transferidos. Essas ações foram listadas do que deve ser feito para os riscos de impacto mais baixo até o mais alto.
 
 Todo projeto tem riscos gerais e específicos. Riscos gerais são geralmente reconhecidos pela comunidade. Um risco típico de projeto de software é a perda de um membro importante da equipe, ou que possui um conhecimento único.
 
 
-Toda premissa é candidata a gerar um risco, que deverá ser analisado. Existem categorias reconhecidas, pode riscos técnicos, externos, organizacionais ou de gerenciamento\citep{pmbok:6}. 
-Para os riscos gerais podemos encontrar \textit{checklists} que podem ser seguidas. Já para os riscos específicos é necessário analisar atentivamente o projeto, suas premissas, complexidades e outros fatores. 
+Toda premissa é candidata a gerar um risco, que deverá ser analisado. Existem categorias reconhecidas, pode riscos técnicos, externos, organizacionais ou de gerenciamento\citep{pmbok:6}.
+Para os riscos gerais podemos encontrar \textit{checklists} que podem ser seguidas. Já para os riscos específicos é necessário analisar atentivamente o projeto, suas premissas, complexidades e outros fatores.
 
 Existem várias heurísticas para tratar o risco, mas a princípio, para cada risco levantado deve ser estimada sua probabilidade e seu impacto. O produto dos dois implica em uma reação. \citet{finocchio:2013} sugere usar duas escalas de 1 a 10 para avaliar a probabilidade e o impacto, fazendo o produto e obtendo as recomendações segundo a Tabela.
 
@@ -304,7 +304,7 @@ Exemplo de riscos: não conseguir contratar cinco novos funcionários com a habi
 
 \subsection{Esforço}
 
-Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-mês ou homem hora. No momento da reunião onde o canvas é usado, não é possível ainda usar uma técnica fortemente quantitativa para isso, como o COCOMO II\citep{Boehm:cocomo2}, pois não se espera que seja possível nem estimar o tamanho real do software, então isso deve ser feito a partir da experiência do grupo, com comparações com projetos anteriores. 
+Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-mês ou homem hora. No momento da reunião onde o canvas é usado, não é possível ainda usar uma técnica fortemente quantitativa para isso, como o COCOMO II\citep{Boehm:cocomo2}, pois não se espera que seja possível nem estimar o tamanho real do software, então isso deve ser feito a partir da experiência do grupo, com comparações com projetos anteriores.
 
 Técnicas adequadas nesse ponto são variações do método de Delphi\citep{delphi:1966}, como o \textit{Planning Poker}\citep{mike:agile:estimating}, ou uso de heurísticas como buscar previsões pessimistas ($P$), médias ($M$) e otimistas ($O$) e calcular uma média ponderada ($M_p=\frac{P+4\times M+O}{6})$\citep{pmbok:6}.
 
@@ -333,9 +333,9 @@ A principal atividade criativa da metodologia é Conceber o Projeto. Isso é fei
 
 Essas reuniões devem contar com representantes da equipe e das partes interessadas, incluindo o patrocinador, clientes, e membros do escritório de projetos ou assemelhados, se essa função existir na organização. É essencial que existam pessoas com a compreensão da gestão de projetos de desenvolvimento software para liderar a reunião, explicar conceitos e trazer sua experiência nas propostas e estimativas.
 
-Durante a reunião, cada passo é focada em preencher um quadro, e para isso deve ser usada uma estratégia em diamante, onde em um primeiro momento deve ser usada uma prática de divergência, ou geração criativa de ideias, normalmente o \textit{brainstorming}\citep{tracy:2015} ou técnica derivada, ou assemelhada, e em um segundo momento uma técnica de convergência,  seja ela de a busca de consenso, priorização ou votação, como por exemplo MoSCoW\citep{dsdm:2nd} ou \textit{dot-voting}\citep{gray:2010}. 
+Durante a reunião, cada passo é focada em preencher um quadro, e para isso deve ser usada uma estratégia em diamante, onde em um primeiro momento deve ser usada uma prática de divergência, ou geração criativa de ideias, normalmente o \textit{brainstorming}\citep{tracy:2015} ou técnica derivada, ou assemelhada, e em um segundo momento uma técnica de convergência,  seja ela de a busca de consenso, priorização ou votação, como por exemplo MoSCoW\citep{dsdm:2nd} ou \textit{dot-voting}\citep{gray:2010}.
 
-Os quadros devem ser inicialmente preenchidos sem limites, já que é necessário estimular a criatividade durante o momento de divergência. Já durante o momento onde se faz a convergência eles devem ser agrupados em ideias semelhantes e postos em ordem de prioridade, urgência ou importância. Além disso, é necessário garantir que todos os \textit{post-its} estejam em um mesmo nível de abstração, se necessário agrupando vários em um só, ou separando um em vários. 
+Os quadros devem ser inicialmente preenchidos sem limites, já que é necessário estimular a criatividade durante o momento de divergência. Já durante o momento onde se faz a convergência eles devem ser agrupados em ideias semelhantes e postos em ordem de prioridade, urgência ou importância. Além disso, é necessário garantir que todos os \textit{post-its} estejam em um mesmo nível de abstração, se necessário agrupando vários em um só, ou separando um em vários.
 Em cada passo, então, são colocados, modificados e retirados \textit{post-its} no canvas, até que os participantes estejam satisfeitos.
 
 É importante notar que a metodologia faz, em um só passo, todo o levantamento de requisitos funcionais, não-funcionais, e restrições. Isso foi decidido pelo fato de, ao usar outras metodologias, ser comum que um item desses tópicos seja proposto enquanto outro tópico é feito. Unificando esse momento, não é necessário parar para discutir questões de ordem da reunião.
@@ -348,7 +348,7 @@ Ao longo da Concepção, é importante que os participantes da reunião estejam 
 
 \subsection{Concepção Iterativa e Incremental}
 
-É possível realizar a concepção do processo de forma iterativa e incremental, mesmo que em apenas uma seção. Para isso, se inicia cada iteração com um problema ou oportunidade, normalmente o mais importante, e se passa por todos os quadros atendendo apenas aquele problema, e mais nenhum outro. Ao terminar a iteração, deve ser analisado se é razoável fazer outra iteração ou o projeto já está definido. 
+É possível realizar a concepção do processo de forma iterativa e incremental, mesmo que em apenas uma seção. Para isso, se inicia cada iteração com um problema ou oportunidade, normalmente o mais importante, e se passa por todos os quadros atendendo apenas aquele problema, e mais nenhum outro. Ao terminar a iteração, deve ser analisado se é razoável fazer outra iteração ou o projeto já está definido.
 
 Durante cada iteração pode ser necessário adaptar o resultado das iterações anteriores para atender os requisitos da nova iteração. Por isso é importante manter alguma memória ao final de cada iteração, por exemplo fotografando o quadro, ou o reproduzindo rapidamente em uma ferramenta digital, como Miro ou mesmo o Power Point.
 
@@ -366,11 +366,11 @@ O Software Project Canvas não impõe, então, que seja usada apenas a ordem pro
     \item iniciar com o porquê, descobrir as partes interessadas e então passar para os requisitos.
 \end{itemize}
 
-Essas ordens alternativas representam situações diferentes na vida real. 
+Essas ordens alternativas representam situações diferentes na vida real.
 
-Na nossa proposta inicial, apresentada na Figura \ref{fig:spc} supomos que a organização tem problemas ou oportunidades, e a partir daí o projeto é criado e, então, olhando esse quadro, são determinadas todas as partes interessadas. 
+Na nossa proposta inicial, apresentada na Figura \ref{fig:spc} supomos que a organização tem problemas ou oportunidades, e a partir daí o projeto é criado e, então, olhando esse quadro, são determinadas todas as partes interessadas.
 
-Na segunda proposta, primeiro foi identificado que algumas partes interessadas estão descontentes, ou precisam de algo. É provável que estas partes interessadas estejam inclusive presente na reunião, e começar por identificá-las pode ajudar a procurar os problemas e seguir com o projeto. 
+Na segunda proposta, primeiro foi identificado que algumas partes interessadas estão descontentes, ou precisam de algo. É provável que estas partes interessadas estejam inclusive presente na reunião, e começar por identificá-las pode ajudar a procurar os problemas e seguir com o projeto.
 
 Finalmente, na terceira proposta, imaginamos que os problemas foram identificados, e logo depois identificamos quem está envolvido com esses problemas.
 
@@ -382,9 +382,9 @@ Finalmente, na terceira proposta, imaginamos que os problemas foram identificado
     \caption{Forma alternativa onde o projeto se inicia com as partes interessadas. Fonte: imagem do autor}
     \label{fig:alter2}
     \end{subfigure}
-    
+
     \vspace{1cm}
-    
+
     \begin{subfigure}[b]{\textwidth}
     \centering
     \includegraphics[width=0.9\textwidth]{imagens/alternativa3.png}
@@ -403,7 +403,7 @@ Outra situação comum é temos como demanda inicial o "O quê". Nesse caso, nã
 
 A segunda atividade do processo tem como objetivo verificar a correção do \textit{Software Project Canvas} que será apresentado para validação na organização e com as outras partes interessadas.
 
-Nessa fase, os participantes da reunião passam a se preocupar com a correção local e global do canvas, buscando garantir que ele apresenta um projeto coeso, racional e viável. 
+Nessa fase, os participantes da reunião passam a se preocupar com a correção local e global do canvas, buscando garantir que ele apresenta um projeto coeso, racional e viável.
 
 Para isso, além de verificações \textit{ad-hoc}, é possível seguir um \textit{check-list} apresentado a seguir.
 \begin{outline}
@@ -418,7 +418,7 @@ Para isso, além de verificações \textit{ad-hoc}, é possível seguir um \text
     \2 Todo o canvas está no mesmo nível de abstração?
     \2 A linguagem é consistente entre os quadros e \textit{post-its}?
     \2 Todo problema e oportunidade está atendido por meio de um objetivo ou meta?
-    \2 Todo objetivo, e meta, busca atender um problema ou oportunidade? 
+    \2 Todo objetivo, e meta, busca atender um problema ou oportunidade?
     \2 Toda meta tem uma métrica?
     \2 Os requisitos funcionais e não-funcionais atendem o Por Que do projeto?
     \2 As partes interessadas estão envolvidas com algum por que ou algum requisito ou restrição do projeto?
@@ -438,13 +438,13 @@ Ao completar a verificação do canvas, é necessário validar o projeto com out
 Fora da reunião, então, o projeto é validado e possíveis \textit{feedbacks} podem ser trazidos ao grupo original para melhorar, refinar, modificar ou mesmo abandonar o projeto, caso tenham sido encontradas falhas irremediáveis.
 
 
-Este método não define uma forma fixa de se fazer a validação. Inclusive, grupos diferentes em uma mesma organização podem usar formas diferentes de validação. Podem ser usados reuniões, workshops, questionários, entrevistas, etc. 
+Este método não define uma forma fixa de se fazer a validação. Inclusive, grupos diferentes em uma mesma organização podem usar formas diferentes de validação. Podem ser usados reuniões, workshops, questionários, entrevistas, etc.
 
 O resultado dessa validação também não é definido em formato, e depende muito do tipo e da qualidade do \textit{feedback} recebido. A partir do resultado, o grupo responsável por lançar o projeto pode decidir não fazer nada, fazer pequenos ajustes ou voltar a fase de concepção.
 
 \subsection{Compartilhar Projeto}
 
-Na última fase do planejamento o projeto é compartilhado com a organização. Novamente, a forma de fazer isso dependende do projeto, da organização e da parte interessadas sendo atingida.  Pode ser necessário criar um plano de projeto formal para aprovação final em uma reunião anual, ou criar documentos mais ligados a métodos ágeis, como uma  visão do projeto ou um \textit{backlog} do produto para equipe de desenvolvimento, ou uma notícia para o jornal de divulgação interna. 
+Na última fase do planejamento o projeto é compartilhado com a organização. Novamente, a forma de fazer isso dependende do projeto, da organização e da parte interessadas sendo atingida.  Pode ser necessário criar um plano de projeto formal para aprovação final em uma reunião anual, ou criar documentos mais ligados a métodos ágeis, como uma  visão do projeto ou um \textit{backlog} do produto para equipe de desenvolvimento, ou uma notícia para o jornal de divulgação interna.
 
 
 
@@ -462,6 +462,28 @@ No futuro será feita uma avaliação do uso do canvas em sala de aula e em proj
 \section*{Agradecimentos}
 
 Agradeço a Yasmin pelo design final do \textit{Software Model Canvas} e aos alunos, como Eduardo Mangeli, e Marcus Parreira, que fizeram críticas e sugestões.
+
+\newpage
+
+\section*{Licença}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{imagens/by-sa}
+    \label{fig:by-sa}
+\end{figure}
+
+
+Software Model Canvas Copyright \copyright\  2021 Geraldo Xexéo está licenciado com uma Licença Creative Commons - Atribuição-CompartilhaIgual 4.0 Internacional.
+
+Baseado no trabalho disponível em:
+
+\url{https://github.com/xexeo/Software-Project-Canvas}.
+
+Podem estar disponíveis autorizações adicionais às concedidas no âmbito desta licença com \url{email:xexeo@ufrj.br}.
+
+O texto completo da licença pode ser obtido em:
+\url{https://creativecommons.org/licenses/by-sa/4.0/}
 
 \printbibliography
 

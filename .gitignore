@@ -10,3 +10,4 @@ main.synctex.gz
 *.toc
 softwareprojectcanvas.synctex.gz
 *.lof
+*.synctex(busy)
