@@ -1,0 +1,268 @@
+% Pacotes usados
+% from KOMA
+\usepackage{scrhack} % evita warning do lst listings
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+% melhor typesetting
+\usepackage{microtype}
+%para underline que quebra linha
+% usar \uline
+% o normalem significa manter o \emph como é
+% senão ele é alterado para underline
+\usepackage[normalem]{ulem}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+\usepackage{outlines}
+% usa mais interfaces de saída
+%  solution for the error “no room for a new \write” (This is a deep magic over TeX)
+%\usepackage{morewrites}
+%\morewritessetup{allocate=10}
+
+% texto em português
+% https://tex.stackexchange.com/questions/13172/detect-which-tex-engine-is-used
+\usepackage{iftex}
+\ifpdftex
+	\typeout{^^J *** PDF MODE ***}
+	\usepackage{cmap} % Make PDF files searchable and copyable
+	\usepackage[utf8]{inputenc}
+	\usepackage{scrwfile}
+\fi
+\ifluatex
+	\typeout{^^J *** LuaLaTeX MODE ***}
+\fi
+
+
+% FONTES USADAS!!!
+\usepackage{lmodern}
+\usepackage{marvosym}
+% bbding tem cross também
+\let\Cross\relax
+\usepackage{bbding}
+% Preciso de emoji
+\usepackage{fontspec}
+\newfontfamily\DejaSans{DejaVu Sans}
+
+
+%%%%%%%%%%%%%%%%%%%% l3packages
+% This collection contains implementations for aspects of the LATEX3 kernel, dealing with higher-level ideas such as the Designer Interface
+% pacotes i3packages
+% frações mais flexíveis
+\usepackage{xfrac}
+% provides a high-level interface for declaring document commands
+\usepackage{xparse}
+%%%%%%%%%%%%%%%%%%% FIM l3packages
+
+
+% to use \currenttime
+\usepackage{datetime}
+
+% avoid pdf warning messages from pdflatex
+%\pdfminorversion=6
+
+%\usepackage{kpfonts}
+%\usepackage{showframe}
+%\usepackage[a4paper]{geometry}
+%Letra  de início de parágrafo
+%\usepackage{lettrine}
+
+%
+% F I G U R A S
+%
+
+% controle melhor dos captions
+% Captions e SUB FIGURAS (subcations resolve esse problema melhor)
+\usepackage[centerlast,font={small},figurewithin=chapter, tablewithin=chapter]{caption}
+\setlength{\captionmargin}{1cm}
+\usepackage{subcaption}
+% usa o H em imagens
+%\usepackage{float}
+
+% pacote para gerenciar quotes pequenos e grandes
+%tem o comando \enquote
+\usepackage[style=brazilian]{csquotes}
+% from the manual
+\renewcommand*{\mkcitation}[1]{ #1}
+% magic for better quotes
+%https://latex.org/forum/viewtopic.php?t=5444
+\newenvironment*{smallquote}
+   {\quote\footnotesize}
+   {\endquote}
+\SetBlockEnvironment{smallquote}
+
+
+% vamos usar o biblatex, recomendação
+%citestyle=alphabetic,bibstyle=authortitle
+\usepackage[ citestyle=authoryear,articlein=false,
+style=ext-authoryear-comp
+,natbib=true,backref=true]{biblatex}
+
+% fix "acedido" por algo mais razoável
+% fiz "e alli" por "et al."
+%\DefineBibliographyStrings{portuguese}{%
+%  urlseen={Disponível em}
+  %,andothers={et al.},andmore={et al.}
+%  }
+ % USE and other no campo author para forçar et al.
+%\bibliographystyle{plainnat} %without url for book entries
+% https://tex.stackexchange.com/questions/445858/changing-reference-style-in-biblatex
+%https://tex.stackexchange.com/questions/10682/suppress-in-biblatex
+% http://linorg.usp.br/CTAN/macros/latex/contrib/biblatex-contrib/biblatex-ext/biblatex-ext.pdf
+
+
+%add document elements like a bibliography or an index to the Table of Contents
+%\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+
+% novas keys de trim e valign (usado em vários
+% tabelas com imagens
+% export permite usar no includegraphics (exporta para ele)
+\usepackage[export]{adjustbox}
+%\graphicspath{ {./Images/} }
+
+
+
+
+
+%\usetikzlibrary{3d}
+
+
+
+% esse parametro evita
+% que o texto seja separado da imagem
+% e facilita (muito) tratar o tamanho
+\usepackage[inkscapelatex=false]{svg}
+
+%controla onde ficam os floats
+% não queremos que pulem uma entrada
+% usa o commando \FloatBarrier
+\usepackage[section]{placeins}
+
+% para addlinespace e toprule
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+
+% permite novos tipos de colunas em Tabelas
+% e ainda uma definição dinâmica
+\usepackage{tabularx}
+\newcolumntype{T}{>{\centering \arraybackslash}X}
+
+% icons do CC, tem comandos conjuntos
+\usepackage{ccicons}
+% http://linorg.usp.br/CTAN/fonts/ccicons/ccicons.pdf
+
+%%%%%%%%%%%% ENUMITEM configurado
+\usepackage{enumitem}
+% queremos menos espaço entre os itens de uma lista
+\setlist{nosep}
+% criando uma check-box list
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+% https://tex.stackexchange.com/questions/13463/specifying-bullet-type-when-using-itemize#
+% o normal é \circle - e * (muito feio)
+%https://texblog.org/2008/10/16/lists-enumerate-itemize-description-and-how-to-change-them/
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\circ$}
+% colocando . entre 1a para ficar 1.a
+% nos \ref para \labels
+% https://tex.stackexchange.com/questions/288407/no-dots-in-the-cross-reference-to-an-item-from-enumerate/288412#288412
+% I want dots
+\makeatletter
+\renewcommand\p@enumii{\theenumi.}
+\renewcommand\p@enumiii{\theenumi.\theenumi.}
+\makeatother
+%%%%%%%%%%%% ENUMITEM END
+
+\usepackage{fancyvrb}
+
+
+% Controlar a Marca Dagua
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{5}
+%\SetWatermarkColor[gray]{0.90}
+%
+% A M S -  PACKAGES
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}%
+
+% para os exercícios
+%\usepackage{exsol}
+%\renewcommand{\exercisename}{Exercício}
+%\renewcommand{\exercisesname}{Exercícios}
+%\renewcommand{\solutionname}{Solução}
+%\renewcommand{\solutionsname}{Soluções}
+%\renewcommand{\seriesname}{Série}
+
+
+
+% minicontent
+%https://tex.stackexchange.com/questions/430594/use-minitoc-with-koma-script-scrbook
+\usepackage{etoc}
+\newcommand{\chaptertoc}[1][Conteúdo]{
+	\etocsettocstyle{\addsec*{#1\\\rule{\textwidth}{0.4pt}}}
+	{\bigskip}
+	\etocsettocdepth{1}
+	\localtableofcontents
+}
+
+
+% para caixas legais
+\usepackage{tcolorbox}
+
+
+% Títulos mais legais ver nos comandos
+\usepackage[Bjornstrup]{fncychap}
+\ChTitleVar{\raggedleft\Huge\sffamily\bfseries%
+%\color{blue}
+}
+%\usepackage{titlesec}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+%Para usar casos de uso, verificar no capítulo
+%comandos copiados da rede
+\usepackage{Comandos/usecases}
+
+% Usando listagens
+
+%não queremos figuras depois das footnotes
+\usepackage[bottom]{footmisc}
+
+\usepackage{etoolbox} % SEM USO AINDA
+
+\usepackage{indentfirst}
+\usepackage{wrapfig}
+
+
+\usepackage{verse}
+\newcommand{\attrib}[1]{%
+    \nopagebreak{\raggedleft\footnotesize #1\par}}
+\renewcommand{\poemtitlefont}{\normalfont\large\itshape\centering}
+
+% Makeindex
+% Não está gerando os índices
+\usepackage{imakeidx}
+\makeindex
+
+% para os novos floats, como os gxinfobox
+\usepackage{newfloat}
+
+% para poder usar url
+\usepackage[hidelinks]{hyperref}
+% Glossários
+%\usepackage[acronym,nomain]{glossaries}
+% Automake is not working welll, use makeglossaries Livro...
+%\usepackage[acronym,automake,docdef=restricted]{glossaries-extra}
+%\makeglossaries
+%\input{Extras/acronimosrt.tex}
+
+\usepackage{lmodern}% scalable font to actually get the large numbers

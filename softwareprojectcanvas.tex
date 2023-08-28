@@ -1,44 +1,37 @@
-\documentclass[a4]{report}
-\renewcommand{\thesection}{\arabic{section}}
-\usepackage[utf8]{inputenc}
-\usepackage[brazilian]{babel}
-\usepackage{csquotes}
-\usepackage[natbib]{biblatex}
-\usepackage{booktabs}
-\usepackage{outlines}
-\usepackage{graphicx}
+\documentclass[fontsize=12pt, a4paper,pagesize=auto,toc=listof, ,twoside,chapterprefix=false,appendixprefix=true,open=right]{scrbook}
+
+\input{Comandos/pacotes.tex}
+\input{Comandos/comandos.tex}
 \usepackage{datetime2}
+
 \addbibresource{bibs/bibliografia.bib}
 \addbibresource{bibs/bibdoslivrosesas.bib}
 \addbibresource{bibs/standards.bib}
+
 \newcommand{\othersize}{0.7\linewidth}
-\usepackage{indentfirst}
-\usepackage{caption}
-\captionsetup{font={footnotesize,bf},justification=centering,margin=1cm}
-\usepackage{subcaption}
-\usepackage{hyperref}
 
 \title{Software Project Canvas v1.0}
 \author{Geraldo Xexéo}
 \date{\today \ \DTMcurrenttime }
+
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-\hspace*{\parindent}Esse artigo apresenta o Software Project Canvas, uma ferramenta ágil que facilita a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
-
-Para a sua  criação foram observadas \ref{problems:total} dificuldades  ao ensinar ou utilizar o \textit{Project Model Canvas} no contexto de projetos de software.
-
-As modificações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo, durante a reunião de concepção do projeto, com discussões semânticas sobre o significado das coisas que não adiantam a definição do projeto.
-\end{abstract}
 
 \tableofcontents
 \listoffigures
 
 \newpage
 
-\section{Introducão}
+\chapter*{Resumo}
+\hspace*{\parindent}Esse documento apresenta o Software Project Canvas, uma ferramenta ágil que facilita a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
+
+Para a sua  criação foram observadas \ref{problems:total} dificuldades  ao ensinar ou utilizar o \textit{Project Model Canvas} no contexto de projetos de software.
+
+As modificações feitas visam facilitar a explicação e o uso de um canvas no planejamento inicial de um projeto de desenvolvimento de software, além de evitar perda de tempo, durante a reunião de concepção do projeto, com discussões semânticas sobre o significado das coisas que não adiantam a definição do projeto.
+
+\chapter{Introducão}
 
 Esse artigo apresenta o Software Project Canvas\footnote{Este documento e arquivos com o Software Project Canvas podem ser encontrados em \url{https://github.com/xexeo/Software-Project-Canvas}}, representado na Figura \ref{fig:spc}, uma ferramenta ágil cujo objetivo é facilitar a colaboração das partes interessadas na  discussão e definição inicial de um projeto de software.
 
@@ -51,9 +44,8 @@ Esse artigo apresenta o Software Project Canvas\footnote{Este documento e arquiv
 
 O \textit{Software Project Canvas} foi motivado por certas dificuldades encontradas ao ensinar e usar o \textit{Project Model Canvas}~\citep{finocchio:2013} no contexto de projetos de Engenharia de Sofware. Após identificar essas dificuldades, foram feitas propostas de correção, e variações do modelo foram avaliadas por alguns especialistas e iniciantes na área.
 
-O artigo contém 6 seções. A próxima seção apresenta o que são canvas, a terceira seção explica a relação entre projetos, agilidade e o uso de canvas, terminando com uma breve descrição do Project Model Canvas. A quarta seção apresenta a proposta completa do Software Project Canvas, e a sexta seção apresenta a conclusão.
 
-\section{O que são Canvas}
+\chapter{O que são Canvas}
 
 Canvas são ferramentas colaborativas que servem de ponto focal em uma atividade onde algo vai ser controlado, decidido ou planejado. São compostos de um quadro branco dividido em várias áreas, cada uma representando uma pergunta, assunto ou tópico em discussão, onde são colocados \textit{post-its} contendo a informação desejada.
 
@@ -71,7 +63,7 @@ A partir do sucesso do \textit{Business Model Canvas},  outros canvas foram prop
 \end{figure}
 
 
-\section{Projetos, Agilidade e Canvas}
+\chapter{Projetos, Agilidade e Canvas}
 
 A Gestão de Projetos é uma área de conhecimento essencial ao sucesso de um projeto. Segundo \citet{kerzner:12ed}, um projeto tem sucesso se
 acaba no prazo, dentro do orçamento, com o desempenho especificado, aceito pelos clientes e usuários, com mudanças mínimas no escopo acordadas entre as partes interessadas, sem causar distúrbio ao fluxo de trabalho da organização e, quando desejado, sem mudar a cultura da organização. Além disso, é necessário satisfazer as partes interessadas~\citep{pmbok:6}. Para alcançar todos esses objetivos é necessário planejar, monitorar e controlar o projeto ao longo de sua realização.
@@ -134,7 +126,7 @@ Para resolver essas dificuldades, este artigo propõe o uso do \textit{Software 
 
 Como resultado, o processo é transformado de 12 para 9 passos, já que mesmo em áreas separadas no canvas os requisitos são todos levantados no mesmo momento, facilitando sua explicação. Além disso, são evitadas muitas discussões desnecessárias, como onde colocar algo que tanto pode ser visto como uma restrição ou como um requisito não-funcional, por diferentes partes interessadas.
 
-\section{O \textit{Software Project Canvas}}
+\chapter{O \textit{Software Project Canvas}}
 
 O Software Project Canvas utiliza 10 quadros, que serão descritos nesta seção. Para cada quadro foi buscado explicar o que ele trata, métodos que podem ser usados para auxiliar seu preenchimento e alguns exemplos. Os quadros se organizam em 6 grupos que respondem às perguntas 5W2H~\citep{nakagawa:2012:5w2h}: \textit{Why, What, Who, When, How} e \textit{How Much}. Não é necessário, em geral, reponder a pergunta \textit{Where} para projetos de software.
 
@@ -149,32 +141,64 @@ O Software Project Canvas utiliza 10 quadros, que serão descritos nesta seção
 
 \subsection{Problemas e Oportunidades}
 
-Todo projeto se inicia porque há algum problema a ser resolvido ou uma oportunidade a ser aproveitada~\citep{semat:1p2,kerzner:12ed}. Ou seja, se deseja uma mudança no estado da organização, incluindo o lançamento de produtos ou serviços para o mercado. Nas discussões sobre projetos de software, os problemas logo aparecem na forma de descontentamento com um sistema atual, informatizado ou não, que funciona com falhas, erros ou não-conformidades, ou uma expectativa para um produto novo.
+Todo projeto se inicia porque há algum problema a ser resolvido ou uma oportunidade a ser aproveitada~\citep{semat:1p2,kerzner:12ed}.
+Ou seja, se deseja uma mudança no estado da organização, incluindo o lançamento de produtos ou serviços para o mercado.
+Nas discussões sobre projetos de software, os problemas logo aparecem na forma de descontentamento com um sistema atual, informatizado ou não, que funciona com falhas, erros ou não-conformidades, ou uma expectativa para um produto novo.
 
-Um problema é uma diferença entre um estado percebido e um estado desejado, que deverá ser tratada pelo projeto. São dificuldades a serem resolvidas, desvios de um padrão, regulamento ou lei, falta de capacidade de realizar uma tarefa, etc.
+Um problema é uma diferença entre um estado percebido e um estado desejado, que deverá ser tratada pelo projeto.
+São dificuldades a serem resolvidas, desvios de um padrão, regulamento ou lei, falta de capacidade de realizar uma tarefa, etc.
 
-Problemas trazem prejuízo, sejam eles financeiros ou de outra forma, como impacto na imagem da empresa. Quando esses prejuízos podem ser medidos, deve ser indicada a forma de medi-los, de maneira que isso possa ser usado para verificar os benefícios que o projeto trará.
+Problemas trazem prejuízo, sejam eles financeiros ou de outra forma, como impacto na imagem da empresa.
+Quando esses prejuízos podem ser medidos de forma quantitativa, como o tempo de atendimento, deve ser indicada a forma de medi-los, de maneira que isso possa ser usado para verificar os benefícios que o projeto trará.
+Quando forem prejuízos mais qualitativos, como percepção dos clientes, também se deve buscar formas de avaliar o impacto do projeto.
 
-Os problemas podem ser divididos de várias formas. Uma delas é entender que existem problemas por não fazer algo, problemas funcionais, ou por não fazer algo como deve ser feito, problemas operacionais. Ambos têm efeitos no negócio, que são problemas de negócio, ou sintomas. Um problema de negócio pode ser a existência de longas filas em um restaurante, que pode ser causado por um problema operacional, a demora no cálculo da conta. Outro problema de negócio pode ser a dificuldade de entrar em contato com os clientes, que pode ser causado por um problema funcional, como a não existência de um cadastro de clientes.
+Os problemas podem ser divididos de várias formas. Uma delas é entender que existem problemas por não fazer algo, problemas funcionais, ou por não fazer algo como deve ser feito, problemas operacionais.
+Ambos têm efeitos no negócio, que são problemas de negócio, ou sintomas.
+Um problema de negócio pode ser a existência de longas filas em um restaurante, que pode ser causado por um problema operacional, a demora no cálculo da conta.
+Outro problema de negócio pode ser a dificuldade de entrar em contato com os clientes, que pode ser causado por um problema funcional, como a não existência de um cadastro de clientes.
 
-Problemas podem ser descobertos e priorizados com uso de método de Pareto. É possível, porém, que o método de Pareto detecte apenas os sintomas. Por exemplo, se usarmos o método de Pareto para analisar as reclamações feitas em um restaurante, podemos descobrir que a maioria é sobre o excesso de tempo de espera na fila. Porém, esse não é o verdadeiro problema, mas sim um sintoma causado por, entre outras coisas, a demora em fechar uma conta. Para identificar as causas-raiz dos problemas, ou seja, o verdadeiro problema que deve ser resolvido, podem ser usadas técnicas como o Diagrama de Espinha de Peixe, ou os 5 Porquês~\citep{gray:2010}. Existem outras técnicas disponíveis, principalmente na literatura de Controle de Qualidade em geral ou Qualidade de Software.
+Problemas podem ser descobertos e priorizados com uso de método de Pareto.
+É possível, porém, que o método de Pareto detecte apenas os sintomas.
+Por exemplo, se usarmos o método de Pareto para analisar as reclamações feitas em um restaurante, podemos descobrir que a maioria é sobre o excesso de tempo de espera na fila.
+Porém, esse não é o verdadeiro problema, mas sim um sintoma causado por, entre outras coisas, a demora em fechar uma conta.
+Para identificar as causas-raiz dos problemas, ou seja, o verdadeiro problema que deve ser resolvido, podem ser usadas técnicas como o Diagrama de Espinha de Peixe, ou os 5 Porquês~\citep{gray:2010}.
+Existem outras técnicas disponíveis, principalmente nas literaturas de Controle de Qualidade em geral, Qualidade de Software, Gestão e Marketing.
 
-Já as oportunidades são percepções que algo pode ser feito para que a organização tenha uma vantagem em relação ao estado atual. Oportunidades podem ser levantadas de várias formas, incluindo o uso de \textit{brainstorming}~\citep{tracy:2015}.
+Já as oportunidades são percepções que algo pode ser feito para que a organização tenha uma vantagem em relação ao estado atual.
+Oportunidades podem ser levantadas de várias formas, incluindo o uso de \textit{brainstorming}~\citep{tracy:2015}.
 
 Problemas e oportunidades podem ser priorizados por meio de técnicas como MoSCoW~\citep{dsdm:2nd} e dot-voting~\citep{gray:2010}.
 
-Exemplos de problemas: documentos perdidos, perda de vendas ao longo do processo, fila excessiva, reclamações dos clientes, reclamações dos fornecedores.
+Exemplos de problemas: documentos perdidos, perda de vendas ao longo do processo, fila excessiva, reclamações dos clientes, reclamações dos fornecedores, muitos atrasos nas entregas, produtos ou serviços que dão prejuízo, etc.
 
-Exemplos de oportunidades: novo produto vai ser lançado, dados disponíveis para \textit{data mining}.
+Exemplos de oportunidades: novo produto vai ser lançado, dados disponíveis para \textit{data mining}, invenção de um novo serviço, detecção de uma nova necessidade dos clientes, etc.
 
 
 \subsection{Objetivos e Metas}
 
-Nesta seção do \textit{Software Project Canvas} serão apresentadas as melhorias que o sistema traz ao negócio. Há certa confusão dos termos objetivos e metas, então é importante definir esses termos para o \textit{Software Project Canvas}. Outro termo que pode ser usado é benefício.
+Nesta seção do \textit{Software Project Canvas} serão apresentadas as melhorias que o sistema traz ao negócio.
+Há certa confusão dos termos objetivos e metas, então é importante definir esses termos para o \textit{Software Project Canvas}.
+Outro termo que pode ser usado é benefício.
 
-Objetivos são mudanças que desejamos na organização. Esses objetivos devem ser SMART, isto é: e\textbf{S}pecíficos, \textbf{M}ensuráveis, \textbf{A}lcançáveis, \textbf{R}ealistas ou \textbf{R}ealizáveis, e delimitados no \textbf{T}empo. Por exemplo, construir um muro (S), de 2 metros de altura (M), com tijolos (A), a um preço de R\$2000,00 (R), em um mês(T).
+Objetivos são mudanças que desejamos na organização.
+Esses objetivos devem ser SMART, isto é:
+\begin{itemize}
+\item \textbf{S}pecíficos,
+\item \textbf{M}ensuráveis,
+\item \textbf{A}lcançáveis,
+\item \textbf{R}ealistas ou \textbf{R}ealizáveis, e
+\item delimitados no \textbf{T}empo.
+\end{itemize}
 
-Metas são resultados que esperamos quando houver a mudança trazida pelo projeto, ou seja, os benefícios trazidos ao negócio por termos alcançados os objetivos. Metas precisam de medidas, subjetivas ou objetivas, também chamadas de qualitativas ou quantitativas, associadas a elas. Por exemplo, o muro pode ter sido colocado para diminuir a quantidade de pessoas que entra em um local, o que pode ser contado, ou para aumentar a sensação de segurança dos moradores, o que é um sentimento subjetivo. Cada objetivo deve ter pelo menos uma meta, e cada meta uma forma de avaliar~\citep{ruble_practical_1997}.
+Um exemplo de objetivo SMART simples é:  construir um muro (S), de 2 metros de altura (M), com tijolos (A), a um preço de R\$2000,00 (R), em um mês(T).
+
+Em Engenharia de Software, nem sempre é fácil determinar alguns desses fatores, como a medida que indica que o projeto está completo, mas é necessário se esforçar para isso, já que é preciso, em algum momento, se certificar que o projeto alcançou seus requisitos mais básicos.
+
+
+Metas são resultados que esperamos quando houver a mudança trazida pelo projeto, ou seja, os benefícios trazidos ao negócio por termos alcançados os objetivos.
+Metas precisam de medidas, subjetivas ou objetivas, também chamadas de qualitativas ou quantitativas, associadas a elas.
+Por exemplo, o muro pode ter sido colocado para diminuir a quantidade de pessoas que entra em um local, o que pode ser contado, ou para aumentar a sensação de segurança dos moradores, o que é um sentimento subjetivo.
+Cada objetivo deve ter pelo menos uma meta, e cada meta uma forma de avaliar~\citep{ruble_practical_1997}.
 Todo objetivo, e suas metas, deve endereçar um item que aparece na justificativa~\citep{finocchio:2013}.
 
 Uma das várias formas de buscar benefícios é usar a heurística IRACIS\footnote{Increase Revenue, Avoid Costs and Improve Service}~\citep{gane:sarson:ssa,ruble_practical_1997}, que os divide em 3 tipos: aumentar receitas, evitar cursos e melhorar serviços.
@@ -185,17 +209,26 @@ Exemplo de objetivo: detecção de necessidade de repor o estoque, com a meta di
 
 Segundo a norma ISO/IEC/IEEE 24765:2017, `` um requisito é uma condição ou capacidade necessária para uma parte interessada resolver um problema ou atingir um objetivo.'', ou, ainda segundo a mesma norma, ``Ele deve ser possuído ou alcançado por um sistema, componente de um sistema para satisfazer um contrato, padrão, especificação ou outro documento formalmente imposto''~\citep{IEEE:24765:2017}.
 
-Requisitos podem ser divididos em dois grandes grupos: funcionais ou não-funcionais. Restrições são tipos especiais de requisitos não-funcionais impostos ao projeto. Requisitos funcionais dizem que funcionalidade o software entrega, na prática, que funcionalidades o usuário exige do software. Já requisitos não-funcionais especificam como essas funcionalidades devem acontecer ou desempenhar. Requisitos funcionais são, em geral, independentes de tecnologias~\cite{essential:palmer}.
+Requisitos podem ser divididos em dois grandes grupos: funcionais ou não-funcionais.
+Restrições são tipos especiais de requisitos não-funcionais impostos ao projeto.
+Requisitos funcionais dizem que funcionalidade o software entrega, na prática, que funcionalidades o usuário exige do software.
+Já requisitos não-funcionais especificam como essas funcionalidades devem acontecer ou desempenhar.
+Requisitos funcionais são, em geral, independentes de tecnologias~\cite{essential:palmer}.
 
-Os Requisitos Não-Funcionais, Restrições e Requisitos Funcionais podem ser levantados no mesmo passo, apesar de haver uma separação no quadro. Isso facilita a discussão do que deve ser entregue, pois não é necessário dizer ``guarde esse requisito para o próximo passo''.
+Os Requisitos não-funcionais, funcionais e as restrições podem ser levantados no mesmo passo, apesar de haver uma separação no quadro.
+Isso facilita a discussão do que deve ser entregue, pois não é necessário dizer ``guarde esse requisito para o próximo passo''.
 
-\subsubsection{Requisitos Funcionais}
+\subsection{Requisitos Funcionais}
 
-Requisitos funcionais dizem o que o software deve fazer. Recomendamos que isso seja feito na forma de histórias do usuário, cujo formato padrão é uma frase do tipo ``Como gerente, eu quero listar os vendedores e suas vendas, para determinar os melhores vendedores da empresa''~\citep{mike:user:stories}.
+Requisitos funcionais dizem o que o software deve fazer.
+Recomendamos que isso seja feito na forma de histórias do usuário, cujo formato padrão é uma frase do tipo ``Como gerente, eu quero listar os vendedores e suas vendas, para determinar os melhores vendedores da empresa''~\citep{mike:user:stories}.
 
 Outra forma possível é usar objetivos do usuário, ou seja, os nomes de casos de uso, como: listar melhores vendedores~\citep{Cockburn2000}.
 
-É importante usar uma estratégia para não deixar a lista de requisitos funcionais muito longa. A primeira é usar casos de uso ou história de usuário de nível de abstração alto, ou seja, usar uma estratégia \textit{top-down} no desenvolvimento dessa lista. Dessa forma, os requisitos poderiam ser semelhantes aos encontrados em uma história do usuário de alto nível~\citep{jacobson:2011:uc2p0}, em uma DFD de nível 0~\citep{gane:sarson:ssa}, ou ainda em diagrama de casos de uso do nível pipa ou nuvem~\citep{Cockburn2000}. O outro é listar apenas os mais importantes. Para isso, pode ser usada a técnica de priorização MoSCoW~\citep{babok,dsdm:2nd} para eliminar os requisitos não adequados à fase inicial.
+É importante usar uma estratégia para não deixar a lista de requisitos funcionais muito longa.
+A primeira é usar casos de uso ou história de usuário de nível de abstração alto, ou seja, usar uma estratégia \textit{top-down} no desenvolvimento dessa lista.
+Dessa forma, os requisitos poderiam ser semelhantes aos encontrados em uma história do usuário de alto nível~\citep{jacobson:2011:uc2p0}, em uma DFD de nível 0~\citep{gane:sarson:ssa}, ou ainda em diagrama de casos de uso do nível pipa ou nuvem~\citep{Cockburn2000}.
+O outro é listar apenas os mais importantes. Para isso, pode ser usada a técnica de priorização MoSCoW~\citep{babok,dsdm:2nd} para eliminar os requisitos não adequados à fase inicial.
 
 Exemplos de requisitos funcionais são:
 \begin{itemize}
@@ -203,12 +236,14 @@ Exemplos de requisitos funcionais são:
     \item no caso de histórias do usuário: como gerente eu quero listar os vendedores e suas vendas para descobrir os melhores vendedores, como leitor eu quero listar os novos lançamentos para poder decidir que livro vou comprar.
 \end{itemize}
 
-\subsubsection{Requisitos Não-Funcionais e Restrições}
+\subsection{Requisitos Não-Funcionais e Restrições}
 
-Requisitos não-funcionais e restrições falam da forma como os requisitos funcionais vão ser alcançados. Apesar de podermos considerar que os requisitos não-funcionais são desejados e as restrições são impostas, é difícil para um pessoa não-treinada fazer essa separação de forma rápida, então não nos preocupamos em fazê-la agora. Em outra fase do processo de criação do \textit{Software Project Canvas}, as restrições, ou requisitos não-funcionais, que inviabilizam o trabalho, podem ser eliminadas ou amenizadas.
+Requisitos não-funcionais e restrições falam da forma como os requisitos funcionais vão ser alcançados.
+Apesar de podermos considerar que os requisitos não-funcionais são desejados e as restrições são impostas, é difícil para um pessoa não-treinada fazer essa separação de forma rápida, então não nos preocupamos em fazê-la agora.
+Em outra fase do processo de criação do \textit{Software Project Canvas}, as restrições, ou requisitos não-funcionais, que inviabilizam o trabalho, podem ser eliminadas ou amenizadas.
 
 
-Estes requisitos podem ser de vários tipos e conhecer uma taxonomia pode ajudar a levantá-los. \citet{sommerville:software:2015} apresenta uma hierarquia de requisitos não funcionais que foi adaptada na Figura.
+Estes requisitos podem ser de vários tipos e conhecer uma taxonomia pode ajudar a levantá-los. \citet{sommerville:software:2015} apresenta uma hierarquia de requisitos não funcionais que foi adaptada na Figura \ref{fig:nofunreq}.
 
 \begin{figure}
     \centering
@@ -219,9 +254,11 @@ Estes requisitos podem ser de vários tipos e conhecer uma taxonomia pode ajudar
 
 Restrições limitam o trabalho realizado e devem ser bem específicas, quantificadas e ainda indicar por quem são impostas.
 
-Os requisitos não-funcionais podem ser associados a todos ou apenas a alguns requisitos funcionais. Se for o último caso, é interessante fazer essa indicação.
+Os requisitos não-funcionais podem ser associados a todos ou apenas a alguns requisitos funcionais.
+Se for o último caso, é interessante fazer essa indicação.
 
-Exemplo de requisito não-funcional: mensagens devem ser na forma de e-mail, o envio de um e-mail deve demorar no máximo 2 minutos, a senha deve seguir as regras de segurança definidas pela empresa. Exemplos de restrições: a linguagem de programação só pode ser Java, o banco de dados usado pelo projeto tem que ser Oracle 10. 
+Exemplo de requisito não-funcional: mensagens devem ser na forma de e-mail, o envio de um e-mail deve demorar no máximo 2 minutos, a senha deve seguir as regras de segurança definidas pela empresa.
+Exemplos de restrições: a linguagem de programação só pode ser Java, o banco de dados usado pelo projeto tem que ser Oracle 10.
 
 
 
@@ -229,17 +266,23 @@ Exemplo de requisito não-funcional: mensagens devem ser na forma de e-mail, o e
 
 Uma parte interessada (P.I.), ou \textit{stakeholders}, é ``um indivíduo, grupo ou organização que pode afetar, ser afetado, ou perceber que será afetado, por uma decisão, atividade, ou resultado, parcial ou final de um projeto''~\citep{pmbok:6}.
 
-As partes interessadas  podem ter opiniões diferentes em relação a como projeto,  vai afetá-las positiva ou negativamente, seja por sua participação ou interesse, quanto a percepções, corretas ou incorretas. Esse efeito pode ser causado tanto pelo projeto como um todo, quanto por partes específicas do mesmo. Algumas serão consideradas \textit{champions} ou evangelistas do projeto, outras podem ser neutras, e ainda outras abertamente, ou secretamente, contra o projeto.
+As partes interessadas  podem ter opiniões diferentes em relação a como projeto vai afetá-las positiva ou negativamente, seja por sua participação ou interesse, quanto a percepções, corretas ou incorretas.
+Esse efeito pode ser causado tanto pelo projeto como um todo, quanto por partes específicas do mesmo.
+Algumas serão consideradas \textit{champions} ou evangelistas do projeto, outras podem ser neutras, e ainda outras abertamente, ou secretamente, contra o projeto.
 
 Identificar as todas as partes interessadas é o passo inicial dos processos de gestão das partes interessadas~\citep{jacobson_essentials_2019,pmbok:6}, com o objetivo de garantir a satisfação das mesmas, e com isso o sucesso do projeto. No SEMAT, por exemplo, identificar as partes interessadas é o primeiro estado para o Alpha \textit{Stakeholders}, seguido da escolha de representantes~\citep{jacobson_essentials_2019}.  Os estados seguintes são nomeados: envolvidas, em acordo, satisfeita para a implantação e satisfeita com o uso~\citep{jacobson_essentials_2019}.
 
-Nessa parte do \textit{Software Project Canvas} são listadas todas as partes interessadas  do projeto. Devem ser consideradas especialmente três tipos de P.I., os usuários finais, o patrocinador e o governo, como órgão legislador a que o projeto pode estar submetido. Para listá-las, pode ser necessário o uso de técnicas como \textit{brainstorming}~\citep{tracy:2015} ou \textit{writestorming}~\citep{gray:2010}.
+Nessa parte do \textit{Software Project Canvas} são listadas todas as partes interessadas  do projeto.
+Devem ser consideradas especialmente três tipos de P.I., os usuários finais, o patrocinador e o governo, como órgão legislador a que o projeto pode estar submetido.
+Para listá-las, pode ser necessário o uso de técnicas como \textit{brainstorming}~\citep{tracy:2015} ou \textit{writestorming}~\citep{gray:2010}.
 
 Outras partes interessadas comuns de encontrarmos são: clientes dos usuários, fornecedores dos usuários, futuros operadores do software, sistemas que podem ser acessados ou acessar o software, e seus mantenedores, organizações e suas partes que podem ter algum interesse no resultado do software.
 
-É importante que sejam usados, sempre que possível, termos ligado ao negócio. Assim, um médico não tem clientes, mas pacientes, enquanto um banco tem correntistas.
+É importante que sejam usados, sempre que possível, termos ligado ao negócio.
+ Assim, um médico não tem clientes, mas pacientes, enquanto um banco tem correntistas.
 
-Fatores externos fora do controle do projeto também podem ser listados aqui. Não é incomum que projetos de software sofram o impacto do valor do dólar, por exemplo.
+Fatores externos fora do controle do projeto também podem ser listados aqui.
+Não é incomum que projetos de software sofram o impacto do valor do dólar, por exemplo.
 
 Por conveniência do processo de definição do projeto de software, a equipe de desenvolvimento, que é, em geral, uma parte interessada, não deve ser considerada nesse momento.
 
@@ -247,17 +290,25 @@ Exemplos de partes interessadas são: vendedores, compradores, pacientes, patroc
 
 \subsection{Equipe}
 
-Nesse quadro é indicada a equipe necessária para o desenvolvimento do projeto. Cada \textit{post-it} deve indicar um papel a ser tomado pelos membros da equipe. Quando for necessário mais de uma pessoa, isso deve ser indicado no mesmo \textit{post-it}. Possivelmente, algumas pessoas podem estar nomeadas no mesmo \textit{post-it}, ou em outro, de outra cor, possivelmente menor, colocado sobre o primeiro.
+Nesse quadro é indicada a equipe necessária para o desenvolvimento do projeto.
+Cada \textit{post-it} deve indicar um papel a ser tomado pelos membros da equipe.
+Quando for necessário mais de uma pessoa, isso deve ser indicado no mesmo \textit{post-it}.
+Possivelmente, algumas pessoas podem estar nomeadas no mesmo \textit{post-it}, ou em outro, de outra cor, possivelmente menor, colocado sobre o primeiro.
 
-Alguns papéis são esperados\citeauthor{finocchio:2013}, como o gerente do projeto e um ou mais programadores. Alguns papéis também são esperados em funções do processo de desenvolvimento de software sendo usado. Por exemplo, se é usado o Scrum, esperamos encontrar o Scrum Master, o Product Owner, que pode, por outro lado, ser listado como parte interessada, e o Time, que será formado de várias pessoas.
+Alguns papéis são esperados\citeauthor{finocchio:2013}, como o gerente do projeto e um ou mais programadores.
+Alguns papéis também são esperados em funções do processo de desenvolvimento de software sendo usado.
+Por exemplo, se é usado o Scrum, esperamos encontrar o Scrum Master, o Product Owner, que pode, por outro lado, ser listado como parte interessada, e o Time, que será formado de várias pessoas.
 
 \subsection{Subsídios e Premissas}
 
-Nesta seção do \textit{Software Project Canvas} deve aparecer tudo que é necessário para que o projeto tenha sucesso. Tipicamente, em projetos de software, subsídios e premissas estão ligados ao acesso da equipe às Partes Interessadas, e a participação das mesmas quando necessário. 
+Nesta seção do \textit{Software Project Canvas} deve aparecer tudo que é necessário para que o projeto tenha sucesso.
+Tipicamente, em projetos de software, subsídios e premissas estão ligados ao acesso da equipe às Partes Interessadas, e a participação das mesmas quando necessário.
 
-Também é comum que existam premissas ligadas a disponibilidade da infraestrutura necessária para o sucesso do projeto. Em muitos projetos também é necessário tratar aqui a disponibilidade financeira.
+Também é comum que existam premissas ligadas a disponibilidade da infraestrutura necessária para o sucesso do projeto.
+Em muitos projetos também é necessário tratar aqui a disponibilidade financeira.
 
-Premissas e subsídios são garantidas pelas partes interessadas, em favor da equipe. Caso uma parte interessada não cumpra seu compromisso em garantir a premissa, ocorre um risco do projeto. Assim, a análise de risco deve considerar todas as premissas feitas.
+Premissas e subsídios são garantidas pelas partes interessadas, em favor da equipe.
+Caso uma parte interessada não cumpra seu compromisso em garantir a premissa, ocorre um risco do projeto. Assim, a análise de risco deve considerar todas as premissas feitas.
 
 Exemplo de premissas ou subsídios: os computadores novos serão entregues dia 15 de maio, os computadores possuirão uma placa gráfica compatível com a NVidia 3060, serão contratados cinco novos programadores, o patrocinador disponibilizará 4 horas por semana para o projeto.
 
@@ -267,9 +318,12 @@ Um projeto de software moderno é feito de forma iterativa e incremental~\citep{
 
 Essas entregas devem ser previstas, sendo que as entregas a curto prazo devem ser previstas com mais detalhe de que as de longo prazo, já que os métodos de desenvolvimento de software usados na indústria se tornaram, na sua maior parte, adaptativos~\citep{agilestate15}.
 
-Em cada entrega é entregue um conjunto de funcionalidades, ou seja, são cumpridos requisitos funcionais. Também são garantidos os requisitos não funcionais e as restrições. Assim, as entregas devem ser construídas a partir desses quadros anteriores, levando em consideração a equipe prevista.
+Em cada entrega é entregue um conjunto de funcionalidades, ou seja, são cumpridos requisitos funcionais.
+Também são garantidos os requisitos não funcionais e as restrições. Assim, as entregas devem ser construídas a partir desses quadros anteriores, levando em consideração a equipe prevista.
 
-É possível que as entregas sejam descritas de forma a implementar parcialmente vários requisitos de forma parcial, como o que é proposto por \citet{jacobson:2011:uc2p0}. Por exemplo, um requisito que diga ``Como professor eu quero enviar mensagens para alunos para dar avisos sobre a próxima aula'', pode em uma entrega enviar e-mails, na seguinte incluir mensagens por WhatsApp, e assim por diante. Nesse caso, deve haver cuidado na descrição das entregas, para deixar claro que os requisitos não são cumpridos integralmente.
+É possível que as entregas sejam descritas de forma a implementar parcialmente vários requisitos de forma parcial, como o que é proposto por \citet{jacobson:2011:uc2p0}.
+Por exemplo, um requisito que diga ``Como professor eu quero enviar mensagens para alunos para dar avisos sobre a próxima aula'', pode em uma entrega enviar e-mails, na seguinte incluir mensagens por WhatsApp, e assim por diante.
+ Nesse caso, deve haver cuidado na descrição das entregas, para deixar claro que os requisitos não são cumpridos integralmente.
 
 Entregas também podem ser desenvolvidas, mais tarde, ou como resultado intermediário para gerar o \textit{Software Project Canvas}, por meio de uma Estrutura Analítica de Projeto (EAP), também conhecida pelo nome em inglês, que faz mais sentido, \textit{Work Breakdown Structure (WBS)}. Nesse caso, deve ser seguida a abordagem de criar uma hierarquia de entregas, e não de processos.
 
@@ -279,17 +333,23 @@ Exemplos de entregas: lista de livros, seleção e compra - em 40 dias; relatór
 
 \subsection{Riscos}
 
-Riscos são incertezas que podem influenciar o resultado do projeto. Atualmente riscos são divididos em ameaças e oportunidades, isto é, existem riscos negativos e positivos.
+Riscos são incertezas que podem influenciar o resultado do projeto.
+Atualmente riscos são divididos em ameaças e oportunidades, isto é, existem riscos negativos e positivos.
 
-É importante para a gestão do projeto gerenciar o risco, para isso devem ser conhecidos sua causa, isto é, porque ele acontece, sua probabilidade de ocorrer e seu impacto. Com isso é possível calcular o efeito do risco no projeto~\citep{kerzner:12ed,pmbok:6}.
+É importante para a gestão do projeto gerenciar o risco, para isso devem ser conhecidos sua causa, isto é, porque ele acontece, sua probabilidade de ocorrer e seu impacto.
+ Com isso é possível calcular o efeito do risco no projeto~\citep{kerzner:12ed,pmbok:6}.
 
-Os riscos podem ser aceitos desprezados, por terem um impacto baixo, aceitos e gerenciados, mitigados, ou, ainda, eliminados ou transferidos. Essas ações foram listadas do que deve ser feito para os riscos de impacto mais baixo até o mais alto.
+Os riscos podem ser aceitos desprezados, por terem um impacto baixo, aceitos e gerenciados, mitigados, ou, ainda, eliminados ou transferidos.
+Essas ações foram listadas do que deve ser feito para os riscos de impacto mais baixo até o mais alto.
 
-Todo projeto tem riscos gerais e específicos. Riscos gerais são geralmente reconhecidos pela comunidade. Um risco geral típico de projeto de software é a perda de um membro importante da equipe, ou que possui um conhecimento único.
+Todo projeto tem riscos gerais e específicos. Riscos gerais são geralmente reconhecidos pela comunidade.
+ Um risco geral típico de projeto de software é a perda de um membro importante da equipe, ou que possui um conhecimento único.
 
 
-Toda premissa é candidata a gerar um risco, que deverá ser analisado. Existem categorias reconhecidas, como riscos técnicos, externos, organizacionais ou de gerenciamento~\citep{pmbok:6}.
-Para os riscos gerais podemos encontrar \textit{checklists} a serem seguidas~\citep{radical:proj:man}. Já para os riscos específicos é necessário analisar atentivamente o projeto, suas premissas, complexidades e outros fatores.
+Toda premissa é candidata a gerar um risco, que deverá ser analisado.
+ Existem categorias reconhecidas, como riscos técnicos, externos, organizacionais ou de gerenciamento~\citep{pmbok:6}.
+Para os riscos gerais podemos encontrar \textit{checklists} a serem seguidas~\citep{radical:proj:man}.
+Já para os riscos específicos é necessário analisar atentivamente o projeto, suas premissas, complexidades e outros fatores.
 
 Existem várias heurísticas para tratar o risco, mas a princípio, para cada risco levantado deve ser estimada sua probabilidade e seu impacto. O produto dos dois implica em uma reação. \citet{finocchio:2013} sugere usar duas escalas de 1 a 10 para avaliar a probabilidade e o impacto, fazendo o produto e obtendo as recomendações segundo a Tabela.
 
@@ -313,15 +373,17 @@ Exemplo de riscos: não conseguir contratar cinco novos funcionários com a habi
 
 \subsection{Esforço}
 
-Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-mês ou homem hora. No momento da reunião onde o canvas é usado, não é possível ainda usar uma técnica fortemente quantitativa para isso, pois não se espera que seja possível nem estimar o tamanho real do software, então isso deve ser feito a partir da experiência do grupo, com comparações com projetos anteriores.
+Nesse quadro deve ser estimado o esforço para desenvolver o software em homens-mês ou homem hora.
+ No momento da reunião onde o canvas é usado, não é possível ainda usar uma técnica fortemente quantitativa para isso, pois não se espera que seja possível nem estimar o tamanho real do software, então isso deve ser feito a partir da experiência do grupo, com comparações com projetos anteriores.
 
 Técnicas adequadas nesse ponto são variações do método de Delphi~\citep{delphi:1966}, como o \textit{Planning Poker}~\citep{mike:agile:estimating}, ou uso de heurísticas como buscar previsões pessimistas ($P$), médias ($M$) e otimistas ($O$) e calcular uma média ponderada ($M_p=\frac{P+4\times M+O}{6})$~\citep{pmbok:6}.
 
 Outra possibilidade é usar técnicas rápidas de Contagem de Pontos de Função~\citep{ifpug:FPM:431}.
 
-\section{A Metodologia do \textit{Software Project Canvas}}
+\chapter{A Metodologia do \textit{Software Project Canvas}}
 
-A metododologia utilizada do \textit{Software Project Canvas} possui 4 grandes passos, sendo inspirada na metodologia proposta pelo \textit{Project Model Canvas}. Ele está descrita em BPMN nas Figuras \ref{fig:bpmn1} e \ref{fig:bpmn2}
+A metododologia utilizada do \textit{Software Project Canvas} possui 4 grandes passos, sendo inspirada na metodologia proposta pelo \textit{Project Model Canvas}.
+ Ele está descrita em BPMN nas Figuras \ref{fig:bpmn1} e \ref{fig:bpmn2}
 
 \begin{figure}[htb]
     \centering
@@ -367,7 +429,7 @@ Mesmo que a próxima iteração do projeto vá resolver apenas o primeiro proble
 
 Se o quadro é mantido fixo na parede ao longo do projeto, pode ser revisado também a cada iteração.
 
-\subsubsection{Ordens Alternativas de Preenchimento}
+\subsection{Ordens Alternativas de Preenchimento}
 
 Apesar de ser comum planejar um projeto na ordem inicial Por que, O que e Quem, definindo o contexto para o qual as outras perguntas vão ser respondidas, é possível fazê-lo em outra ordem.
 
@@ -460,7 +522,7 @@ Na última fase do planejamento o projeto é compartilhado com a organização. 
 
 
 
-\section{Conclusão}
+\chapter{Conclusão}
 
 Este artigo apresenta o \textit{Software Project Canvas} um novo canvas para o planejamento ágil de um projeto de software. Ele foi criado para ser usado em substituição a outros canvas destinados ao planejamento inicial de projetos em geral, que são menos adaptados a linguagem e a prática dos desenvolvedores de software. Para a sua  criação foram observados \ref{problems:total} dificuldades encontradas ao ensinar ou utilizar o \textit{Project Model Canvas}, que serviu de fonte de inspiração. As adaptações feitas visam facilitar a explicação e o uso, além de evitar perda de tempo com discussões que não adiantam a definição do projeto.
 
@@ -468,13 +530,13 @@ No futuro será feita uma avaliação do uso do canvas em sala de aula e em proj
 
 
 
-\section*{Agradecimentos}
+\chapter*{Agradecimentos}
 
 Agradeço a Yasmin pelo design final do \textit{Software Model Canvas} e aos alunos, como Eduardo Mangeli e Marcus Parreira, que fizeram críticas e sugestões.
 
 \newpage
 
-\section*{Licença}
+\chapter*{Licença}
 
 \begin{figure}[h]
     \centering

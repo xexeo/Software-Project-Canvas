@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\def\ex@version{v0.1}
+\ProvidesPackage{exercicio}[2022/01/08 \cw@version exercicio]
+
+\newcommand{\exercicioversion}{\ex@version}%
+\newcommand{\printexercicioversion}{exercicio v. \exercicioversion}%
+
+\newif\ifshowednotes\ex@showanswersfalse%
+\DeclareOption{answers}{\ex@showanswersttrue}
+
+\RequirePackage{environ}
+
+
+
+\NewEnviron{exercise}[1]{%
+\textbf{Resposta}
+#1}%
+{}%
+
+
+\ifshowanswers
+\NewEnviron{answer}[#1]{%
+\textbf{Resposta}
+#1}%
+{}%
+\else
+\NewEnviron{answer}{%
+}%
+{}%
+\fi

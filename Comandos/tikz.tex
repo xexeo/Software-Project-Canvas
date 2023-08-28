@@ -1,0 +1,134 @@
+% The Tkiz packages
+\usepackage{pdfpages}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usepackage{icomma}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\usepackage{Comandos/pgf-pie}
+\usepackage[]{tikz-3dplot}
+\usetikzlibrary{fadings}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+\usetikzlibrary{shadows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{automata}
+\usetikzlibrary{positioning}
+\usetikzlibrary{topaths}
+\usetikzlibrary{intersections}
+\usetikzlibrary{matrix}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{angles,quotes,babel}
+
+
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+
+
+
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usepgflibrary{decorations.pathreplacing}
+\usepgflibrary{decorations.markings}
+\usepgflibrary{decorations.footprints}
+\usepgflibrary{decorations.fractals}
+
+\pgfplotsset{compat=1.14}
+
+%%%%%%%%%%%%%%%%%%%
+% Setas para desenhar ER
+%https://tex.stackexchange.com/questions/462914/how-to-create-an-er-diagram-using-tikzpicture-environment
+%%%%%%%%%%%%%%%%%%%%%
+\pgfdeclarearrow{ %page 1020 of 3.0.1a manual
+name = mmany,
+parameters = { },
+setup code = { },
+drawing code = {
+    \newdimen\arrowsize%
+    \arrowsize=0.5pt%
+    \pgfsetdash{}{+0pt}%
+    \pgfsetmiterjoin%
+    \advance\arrowsize by .25\pgflinewidth%
+    \pgfpathmoveto{\pgfqpoint{0pt}{-9\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-13\arrowsize}{0pt}}%
+    \pgfpathlineto{\pgfqpoint{0pt}{9\arrowsize}}%
+    \pgfpathmoveto{\pgfqpoint{-19\arrowsize}{-10\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-19\arrowsize}{10\arrowsize}}%
+    \pgfusepathqstroke%
+    },
+defaults = { }
+}
+
+\pgfdeclarearrow{ %page 1020 of 3.0.1a manual
+name = omany,
+parameters = { },
+setup code = { },
+drawing code = {
+    \newdimen\arrowsize%
+    \arrowsize=0.5pt%
+    \pgfsetdash{}{+0pt}%
+    \pgfsetmiterjoin%
+    \advance\arrowsize by .25\pgflinewidth%
+    \pgfpathmoveto{\pgfqpoint{0pt}{-9\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-13\arrowsize}{0pt}}%
+    \pgfpathlineto{\pgfqpoint{0pt}{9\arrowsize}}%
+    \pgfusepathqstroke%
+    \pgfsetfillcolor{white}
+    \pgfpathcircle{\pgfpoint{-19\arrowsize}{0}} {6\arrowsize}%
+    \pgfusepathqfillstroke%
+    },
+defaults = { }
+}
+
+\pgfdeclarearrow{ %page 1020 of 3.0.1a manual
+name = mone,
+parameters = { },
+setup code = { },
+drawing code = {
+    \newdimen\arrowsize%
+    \arrowsize=0.5pt%%
+    \pgfsetdash{}{+0pt}%
+    \pgfsetmiterjoin%
+    \advance\arrowsize by .25\pgflinewidth%
+    \pgfpathmoveto{\pgfqpoint{-9\arrowsize}{-10\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-9\arrowsize}{10\arrowsize}}%
+    \pgfpathmoveto{\pgfqpoint{-19\arrowsize}{-10\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-19\arrowsize}{10\arrowsize}}%
+    \pgfusepathqstroke%
+    },
+defaults = { }
+}
+
+\pgfdeclarearrow{ %page 1020 of 3.0.1a manual
+name = oone,
+parameters = { },
+setup code = { },
+drawing code = {
+    \newdimen\arrowsize%
+    \arrowsize=0.5pt%
+    \pgfsetdash{}{+0pt}%
+    \pgfsetmiterjoin%
+    \advance\arrowsize by .25\pgflinewidth
+    \pgfpathmoveto{\pgfqpoint{-9\arrowsize}{-10\arrowsize}}%
+    \pgfpathlineto{\pgfqpoint{-9\arrowsize}{10\arrowsize}}%
+    \pgfsetfillcolor{white}
+    \pgfpathcircle{\pgfpoint{-19\arrowsize}{0}} {6\arrowsize}%
+    \pgfusepathqfillstroke%
+    },
+defaults = { }
+}
+
+\newcommand{\fnurl}[1]{\footnote{\url{#1}}}
